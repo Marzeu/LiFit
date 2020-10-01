@@ -33,9 +33,11 @@
  <!-- <a href="#-como-executar-o-projeto">Como executar</a> •  -->
  <a href="#-tecnologias">Tecnologias</a> •  
  <a href="#-autores">Autores</a> • 
+ <a href="#-supervisão">Supervisão</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
 
+---
 ## 💻 Sobre o projeto
   
 <p align="justify">
@@ -44,6 +46,7 @@ A aplicação consiste em um sistema Web para compras de comidas saudáveis e co
 Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso de Desenvolvimento de Sistemas do SENAI/CTAI - Florinópolis/SC. 
 </p>
 
+---
 ## ⚙️ Funcionalidades
 
 <!-- - [x] Empresas ou entidades podem se cadastrar na plataforma web enviando:
@@ -57,7 +60,6 @@ Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso d
   - [x] entrar em contato com a entidade através do E-mail ou do WhatsApp -->
 
 ---
-
 ## 🎨 Layout
 
 <!-- O layout da aplicação está disponível no Figma:
@@ -66,6 +68,7 @@ Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso d
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a> -->
 
+---
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -121,10 +124,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
 -   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)** -->
 
----
 
-## 🦸 Autores
 ---
+## 👶 Autores
+
 <table>
 <tr>
 <td align="center"><a href="https://github.com/CamilexXx"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/62322797?s=460&u=80cba142cec034ff81f7e414474e5d26ca3b6c46&v=4" width="100px;" alt=""/>
@@ -161,6 +164,27 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </tr>
 </table>
 
+---
+## 👴 Supervisão
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/Pixelikas"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/67108278?s=460&u=5add5bb5b265e6c5eaef22f041a802a4da538123&v=4" width="100px;" alt=""/>
+<br /><sub><b>Lucas Naspolini</b></sub></a>
+
+[![Linkedin Badge](https://img.shields.io/badge/-LucasNaspolini-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-naspolini-ribeiro-776a39148/)](https://www.linkedin.com/in/lucas-naspolini-ribeiro-776a39148/) 
+</td>
+
+<td align="center"><a href="https://github.com/oliveiramb"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/20189484?s=460&v=4" width="100px;" alt=""/>
+<br /><sub><b>Marcos Bruno</b></sub></a>
+
+[![Linkedin Badge](https://img.shields.io/badge/-MarcosBruno-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marzeu-selau-junior/)](https://www.linkedin.com/in/marzeu-selau-junior/) 
+</td>
+
+</table>
+</tr>
+
+---
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).

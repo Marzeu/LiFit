@@ -39,7 +39,7 @@
 ## 💻 Sobre o projeto
   
 <p align="justify">
-A aplicação consiste em um sistema Web para compras de comida saudável e com entrega agendada.
+A aplicação consiste em um sistema Web para compras de comidas saudáveis e com entrega agendada.
 
 Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso de Desenvolvimento de Sistemas do SENAI/CTAI - Florinópolis/SC. 
 </p>

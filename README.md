@@ -28,12 +28,11 @@
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#%EF%B8%8F-funcionalidades">Funcionalidades</a> •
  <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-contribuidores">Contribuidores</a> • 
- <a href="#-autor">Autor</a> • 
+ <a href="#-tecnologias">Tecnologias</a> •  
+ <a href="#-autores">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
 
@@ -124,7 +123,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
-### Autores
+## 🦸 Autores
 ---
 <table>
 <tr>

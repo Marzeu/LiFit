@@ -1,9 +1,14 @@
 {
-  "name": "LiFit",
+  "name": "lifit",
   "version": "1.0.0",
   "description": "SA-Senai",
   "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  },
   "scripts": {
+    "server": "node ./server.js",
+    "start": "npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

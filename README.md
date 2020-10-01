@@ -73,6 +73,8 @@ Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso d
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+-   **[Json Server](https://github.com/typicode/json-server)**
+
 <!-- #### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**

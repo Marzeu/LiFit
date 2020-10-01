@@ -1,0 +1,20 @@
+{
+    "devs": [
+        {
+            "id": 1,
+            "name": "Marzeu"
+        },
+        {
+            "id": 2,
+            "name": "Lucas"
+        },
+        {
+            "id": 3,
+            "name": "Mikaella"
+        },
+        {
+            "id": 4,
+            "name": "Camilo"
+        }
+    ]
+}

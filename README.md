@@ -43,7 +43,7 @@
 <p align="justify">
 A aplicação consiste em um sistema Web para compras de comidas saudáveis e com entrega agendada.
 
-Projeto desenvolvido durante a Situação de Aprendizagem - SA durante o curso de Desenvolvimento de Sistemas do SENAI/CTAI - Florinópolis/SC. 
+Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso de Desenvolvimento de Sistemas do SENAI/CTAI - Florianópolis/SC. 
 </p>
 
 ---
@@ -135,7 +135,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <td align="center"><a href="https://github.com/CamilexXx"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/62322797?s=460&u=80cba142cec034ff81f7e414474e5d26ca3b6c46&v=4" width="100px;" alt=""/>
 <br /><sub><b>Camilo Valero Vazquez</b></sub></a>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Camilo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marzeu-selau-junior/)](https://www.linkedin.com/in/marzeu-selau-junior/)
+[![Linkedin Badge](https://img.shields.io/badge/-Camilo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/camilo-valero-vazquez-877545169/)](https://https://www.linkedin.com/in/camilo-valero-vazquez-877545169/)
 </td>
 
 <td align="center">
@@ -144,7 +144,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <br />
  <sub><b>Lucas Ferreira</b></sub></a>
 
-[![Linkedin Badge](https://img.shields.io/badge/-LucasFerreira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marzeu-selau-junior/)](https://www.linkedin.com/in/marzeu-selau-junior/) 
+[![Linkedin Badge](https://img.shields.io/badge/-LucasFerreira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-ferreira-2a41991b2/)](https://www.linkedin.com/in/lucas-ferreira-2a41991b2/) 
 </td>
 
 <td align="center">
@@ -195,4 +195,4 @@ Feito com ❤️ pela equipe Ratel 👋🏽 Entre em contato!
 
 [![Gmail Badge](https://img.shields.io/badge/-ratelequipe@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:ratelequipe@gmail.com)](mailto:ratelequipe@gmail.com)
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Marzeu/)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)]()

@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "name": "banana"
+    }
+  ],
+  "clients": [
+    {
+      "name": "Armando"
+    }
+  ],
+  "users": [
+    {
+      "name": "Marzeu"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Marcos Bruno",
+      "alias": "Carioca",
+      "photo": "https://avatars0.githubusercontent.com/u/20189484?s=460&v=4",
+      "github": "https://github.com/oliveiramb",
+      "id": 1
+    },
+    {
+      "name": "Lucas Naspolini",
+      "alias": "Criciuma",
+      "photo": "https://avatars0.githubusercontent.com/u/67108278?s=460&u=5add5bb5b265e6c5eaef22f041a802a4da538123&v=4",
+      "github": "https://github.com/Pixelikas",
+      "id": 2
+    }
+  ],
+  "devs": [
+    {
+      "name": "Marzeu",
+      "alias": "Marza",
+      "photo": "https://avatars0.githubusercontent.com/u/51306062?s=460&u=326999fd00b8f9f5329d69eb579580d080179818&v=4",
+      "email": "msjfsc@gmial.com",
+      "linkedin": "https://www.linkedin.com/in/marzeu-selau-junior/",
+      "github": "https://github.com/Marzeu",
+      "id": 1
+    },
+    {
+      "name": "Lucas Ferreira",
+      "alias": "menino maluquinho",
+      "photo": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4",
+      "email": "deltaluska@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/lucas-ferreira-2a41991b2/",
+      "github": "https://github.com/LucasFerreira-1",
+      "id": 2
+    },
+    {
+      "name": "Mikaella Franco",
+      "alias": "Mr.Yosa",
+      "photo": "https://avatars1.githubusercontent.com/u/65317307?s=460&v=4",
+      "email": "mikaellafrancojorge@gmail.com",
+      "linkedin": "#",
+      "github": "https://github.com/mikaellafranco",
+      "id": 3
+    },
+    {
+      "name": "Camilo Valero Vazquez",
+      "alias": "jájájá",
+      "photo": "https://www.google.com/s2/u/4/photos/public/AIbEiAIAAABDCN3037XWpsS5AyILdmNhcmRfcGhvdG8qKGUyYjI5MzcwYzJkZDA5ZTlkYWIzZTU4NjNkMTk4OTM5NzY2NmFiNGIwAVVv-hJHNTwUrhQwKlviQT7uqUMa?sz=40",
+      "email": "camilovalero82@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/camilo-valero-vazquez-877545169/",
+      "github": "https://github.com/CamilexXx",
+      "id": 4
+    }
+  ],
+  "team": [
+    {
+      "name": "Ratel",
+      "url": "",
+      "email": "ratelequipe@gmail.com"
+    }
+  ]
+}

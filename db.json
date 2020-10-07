@@ -1,7 +1,81 @@
 {
   "products": [
     {
-      "name": "banana"
+      "name": "banana",
+      "id": 1,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "maçã",
+      "id": 2,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "pera",
+      "id": 3,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "repolho",
+      "id": 4,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "salada",
+      "id": 5,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "batata",
+      "id": 6,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "xuxu",
+      "id": 7,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "uva",
+      "id": 8,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "limão",
+      "id": 9,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "cebola",
+      "id": 10,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
+    },
+    {
+      "name": "laranja",
+      "id": 11,
+      "description": "banana, bananinha, bananão",
+      "price": 1.99,
+      "url": "https://avatars2.githubusercontent.com/u/62311948?s=460&u=11ae9f3a7f2f11179be982b38afb63b7973b4921&v=4"
     }
   ],
   "clients": [

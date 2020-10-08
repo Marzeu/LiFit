@@ -22,11 +22,9 @@
   </a>
 </p>
 
-</p>
 <h1 align="center">
     <img alt="Lifit" title="#Lifit" src="./assets/logo.jpeg" />
 </h1>
-
 
 <h4 align="center"> 
 	🚧  LiFit Em construção... 🚧

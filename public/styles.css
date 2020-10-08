@@ -5,14 +5,14 @@ body {
     height: 100%;
 }
 
-h1, h4 {
+a, h1, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo {
-    margin: 20px auto;
+    margin: auto;
     justify-content: center;
     align-items: center;
 }

@@ -56,7 +56,7 @@ async function getAll() {
         // divCard.appendChild(ulListGroup);
         divCard.appendChild(divCardBodyBotton);
         container.appendChild(divCard);
+        
     }
 }
 getAll();
-

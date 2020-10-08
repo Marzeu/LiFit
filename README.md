@@ -18,12 +18,12 @@
   </a>
 
   <a href="#">
-    <img alt="Feito por Ratel" src="https://img.shields.io/badge/feito%20por-Ratel-FF61F6">
+    <img alt="Feito por Ratel" src="https://img.shields.io/badge/feito%20por-Ratel-92f04c">
   </a>
 </p>
 
 <h1 align="center">
-    <img alt="Lifit" title="#Lifit" src="./assets/logo.jpeg" />
+    <img alt="Lifit" title="#Lifit" src="./public/assets/images/logo.jpeg" />
 </h1>
 
 <h4 align="center"> 

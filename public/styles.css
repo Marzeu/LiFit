@@ -1,5 +1,5 @@
 body {
-    background-color: #92f04c;
+    background-color: var(--color-background);
     background-position: right;
     background-repeat: no-repeat;
     height: 100%;
@@ -35,7 +35,7 @@ a {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--color-box-footer);
     border-top: 1px solid black;
     padding-left: 16px;
     padding-right: 16px;

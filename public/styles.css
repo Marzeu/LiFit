@@ -1,180 +1,25 @@
-/* @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-
-.snip1268 {
-    font-family: Raleway, Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-    min-width: 600px;
-    max-width: 800px;
-    width: 100%;
-    color: #333;
-    text-align: center;
-    background-color: #f5f5f5;
-    line-height: 1.6em
-} */
-
-/* body {
-    background-image: url('https://img.freepik.com/foto-gratis/surtido-verduras-laico-plano-sobre-fondo-madera_23-2148655352.jpg?size=626&ext=jpg');
-} */
-
-/* .snip1268 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .6s ease;
-    transition: all .6s ease
-}
-
-.snip1268 .image {
-    position: relative
-}
-
-.snip1268 img {
-    max-width: 100%;
-    vertical-align: top;
-    -webkit-transition: opacity .35s;
-    transition: opacity .35s
-}
-
-.snip1268 .add-to-cart, .snip1268 .icons {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    opacity: 0
-}
-
-.snip1268 .icons {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    top: 20px;
-    display: flex;
-    justify-content: space-between
-}
-
-.snip1268 .icons a {
-    width: 32.5%;
-    background: #fff
-}
-
-.snip1268 .icons a:hover {
-    background: #000
-}
-
-.snip1268 .icons a:hover i {
-    color: #fff;
-    opacity: 1
-}
-
-.snip1268 .icons i {
-    line-height: 46px;
-    font-size: 20px;
-    color: #000;
-    text-align: center;
-    opacity: .7;
-    margin: 0
-}
-
-.snip1268 .add-to-cart {
-    position: absolute;
-    bottom: 20px;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    font-size: .8em;
-    color: #000;
-    line-height: 46px;
-    letter-spacing: 1.5px;
-    background-color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase
-}
-
-.snip1268 .add-to-cart:hover {
-    background: #000;
-    color: #fff
-}
-
-.snip1268 figcaption {
-    padding: 20px 20px 30px
-}
-
-.snip1268 h2, .snip1268 p {
-    margin: 0;
-    text-align: left
-}
-
-.snip1268 h2 {
-    margin-bottom: 10px;
-    font-weight: 700
-}
-
-.snip1268 p {
-    margin-bottom: 15px;
-    font-size: .85em;
-    font-weight: 500
-}
-
-.snip1268 .price {
-    font-size: 1.3em;
-    opacity: .5;
-    font-weight: 700;
-    text-align: right
-}
-
-.snip1268.hover img, .snip1268:hover img {
-    opacity: .8
-}
-
-.snip1268.hover .add-to-cart, .snip1268.hover .icons, .snip1268:hover .add-to-cart, .snip1268:hover .icons {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1
-} */
-
 body {
-    background-color: #16dd52 !important;
-    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.76CA34krkPPf3DsnQ2ZDzQHaEN%26pid%3DApi&f=1"); */
+    background-color: #92f04c;
     background-position: right;
     background-repeat: no-repeat;
     height: 100%;
 }
 
-.card {
-    background-color: #f5f5f5 !important;
-    width: 30%;
-    margin: 10px auto;
-    align-items: center;
+h1, h4 {
+    display: flex;
     justify-content: center;
-}
-
-.list-group-item {
-    background-color: #f5f5f5 !important;
-}
-
-.card-img-top {    
-    max-width: 100%;
-    vertical-align: top;
-    -webkit-transition: opacity .35s;
-    transition: opacity .35s
+    align-items: center;
 }
 
 .logo {
-    width: 30%;
-    margin: auto;
-    align-items: center;
+    margin: 20px auto;
     justify-content: center;
+    align-items: center;
 }
 
 a {
-    color: black !important;
+    color: black;
 }
-
-/* .redes {
-    height: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-} */
 
 .footer-container-flex {
     width: auto;

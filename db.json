@@ -31,7 +31,7 @@
     {
       "name": "salada",
       "id": 5,
-      "description": "banana, bananinha, bananão",
+      "description": "salada gostosa regada à vinagre balsâmico",
       "price": 5.99,
       "url": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2018/04/21/salada.jpg"
     },
@@ -45,7 +45,7 @@
     {
       "name": "xuxu",
       "id": 7,
-      "description": "banana, bananinha, bananão",
+      "description": "xuxuzinho",
       "price": 1.99,
       "url": "https://www.ibahia.com/fileadmin/user_upload/ibahia/2019/setembro/12/beneficios-do-chuchu_foto.jpg?width=1200&enable=upscale"
     },

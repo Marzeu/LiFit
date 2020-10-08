@@ -23,7 +23,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="Lifit" title="#Lifit" src="./assets/logo.jpeg" />
+    <img alt="Lifit" title="#Lifit" src="./public/assets/logo.jpeg" />
 </h1>
 
 <h4 align="center"> 

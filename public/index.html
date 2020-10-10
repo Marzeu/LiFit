@@ -6,6 +6,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/styles/global.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 
@@ -13,34 +16,56 @@
 
 <body>
 
+    <header>
+        <div class="container">
+            <a href="/">
+                <div class="logo">
+                    <h1>Lifit</h1>
+                    <h2>Sua vida mais saudável</h2>
+                </div>
+            </a>
+
+            <form class="search">
+                <input type="text" name="filter" placeholder="Buscar por Produtos" value="">
+            </form>
+
+            <nav class="primary">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="material-icons">add</i>
+                            Novo Anúncio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons">account_circle</i>
+                            Minha Conta
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="card">
         <a href="./produtos/index.html">Produtos</a>
         <a href="./clientes/index.html">Clientes</a>
-        <a href="./usuarios/index.html">Usuário</a>        
+        <a href="./usuarios/index.html">Usuário</a>
 
         <h1>
-            <img alt="Lifit" title="#Lifit" src="./assets/images/logo.jpeg" class="logo" />
+            <img alt="Lifit" title="#Lifit" src="./assets/images/logo.jpeg" class="banner" />
         </h1>
 
         <h4>
             🚧 LiFit Em construção... 🚧
         </h4>
-
     </div>
-    <div>
 
-        <div id="container">
-            <section class="footer-container-flex">
-                <footer class="footer">
-
-                    <p>Desenvolvido por
-                        <a href="https://github.com/Marzeu/LiFit">
-                            Ratel
-                        </a>
-                    </p>
-
-                </footer>
-            </section>
+    <footer>
+        Desenvolvido por<a href="https://github.com/Marzeu/LiFit"> Ratel
+            </a>        
+    </footer>
 
 </body>
 

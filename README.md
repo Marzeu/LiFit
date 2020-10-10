@@ -23,7 +23,19 @@
 </p>
 
 <h1 align="center">
+<<<<<<< HEAD
     <img alt="Lifit" title="#Lifit" src="./public/assets/images/logo.jpeg" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <img alt="Lifit" title="#Lifit" src="./public/assets/logo.jpeg" />
+=======
+    <img alt="Lifit" title="#Lifit" src="./public/assets/images/logo.jpeg" />
+>>>>>>> 7f71445... estilo global com cores da paleta e reestrutuarção das pastas
+=======
+    <img alt="Lifit" title="#Lifit" src="./public/assets/images/logo.jpeg" />
+>>>>>>> 7f71445... estilo global com cores da paleta e reestrutuarção das pastas
+>>>>>>> c698bc5... rebase
 </h1>
 
 <h4 align="center"> 

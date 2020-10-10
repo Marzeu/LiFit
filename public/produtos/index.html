@@ -5,44 +5,57 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Produtos</title>
+
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel='stylesheet' type='text/css' media='screen' href='../assets/styles/global.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 </head>
 
 <body>
-<header>
-    
-</header>
-    
-    <div id="mostrar"></div>
-    
 
-    <div>
-        <p class="logo">
-            <img src="#" alt="">
-        </p>
+    <header>
+        <div class="container">
+            <a href="/">
+                <div class="logo">
+                    <h1>Lifit</h1>
+                    <h2>Sua vida mais saudável</h2>
+                </div>
+            </a>
 
-        <div id="container">
+            <form class="search">
+                <input type="text" name="filter" placeholder="Buscar por Produtos" value="">
+            </form>
 
-            <section class="footer-container-flex">
-                <footer class="footer">                   
-                    <p>Desenvolvido por
-                        <a href="https://github.com/Marzeu/LiFit">
-                            Ratel
+            <nav class="primary">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="material-icons">add</i>
+                            Novo Anúncio
                         </a>
-                    </p>                  
-                </footer>
-            </section>
+                    </li>
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons">account_circle</i>
+                            Minha Conta
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            <script src='main.js'></script>
+    <div id="mostrar"></div>
+
+    <footer>
+        Desenvolvido por<a href="https://github.com/Marzeu/LiFit"> Ratel
+        </a>
+    </footer>
+
+    <script src='main.js'></script>
 </body>
 
 </html>

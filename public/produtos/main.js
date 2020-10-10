@@ -10,7 +10,7 @@ async function getAll() {
 
     for (let i = 0; i < data.length; i++) {
 
-        let container = document.getElementById('container');
+        let container = document.getElementById('mostrar');
 
         let divCard = document.createElement('div');
         let img = document.createElement('img');

@@ -22,33 +22,33 @@ body {
     vertical-align: top;
     -webkit-transition: opacity .35s;
     transition: opacity .35s
-} */
+} 
 
-/* .logo {
+.logo {
     width: 30%;
     margin: auto;
     align-items: center;
     justify-content: center;
-} */
+}
 
-/* a {
+a {
     color: black !important;
-} */
+} 
 
-/* .redes {
+.redes {
     height: 35px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-} */
+} 
 
-/* .footer-container-flex {
+.footer-container-flex {
     width: auto;
     max-width: 680px;
     padding: 0 15px;
-} */
+} 
 
-/* .footer {
+.footer {
     display: flex;
     position: fixed;
     align-items: center;

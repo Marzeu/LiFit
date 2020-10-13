@@ -52,7 +52,7 @@ try {
     console.log(data);    
 }
 catch {
-    debugger; //não funfa
+    swal("Good job!", "You clicked the button!", "error");
 }
 
 }

@@ -47,8 +47,7 @@ async function postProducts() {
             swal("Não deu.", "Algo de errado aconteceu", "error");
             return;
         };
-        const data = await res.json();
-        sweetAlert();        
+        sweetAlert();
     }
     catch {
         swal("Não deu.", "Algo de errado aconteceu", "error");
@@ -59,17 +58,17 @@ function sweetAlert() {
     swal({
         title: "Produto cadastrado com sucesso!",
         text: "Deseja cadastrar outro produto?",
-        icon: "success",        
+        icon: "success",
         buttons: {
             cancel: true,
             confirm: true,
         },
     })
-    .then((cadastrarNovo) => {
-        if (cadastrarNovo) {
-            window.location.href = '/produtos/novo'
-        } else {
-            window.location.href = '/'
-        };
-    });
+        .then((cadastrarNovo) => {
+            if (cadastrarNovo) {
+                window.location.href = '/produtos/novo'
+            } else {
+                window.location.href = '/'
+            };
+        });
 };

@@ -21,13 +21,9 @@ input.addEventListener("keydown", function (e) {
 // nesse caso tudo o que não for número será substituido por um campo vazio "".
 // O construtor formata para o R$ padrão internacional.
 
-// const URL = window.location.hostname.includes('localhost')
-//     ? 'http://localhost:8080/products'
-//     : 'https://api-lifit.herokuapp.com/products';
-
-// async function getAll() {
-//     const res = await fetch(URL);
-//     const data = await res.json(); }
+const URL = window.location.hostname.includes('localhost')
+   ? 'http://localhost:8080/products'
+     : 'https://api-lifit.herokuapp.com/products';
 
 async function postProducts() {
 
@@ -38,7 +34,7 @@ async function postProducts() {
     const url = document.getElementById('url').value;
 
     const body = { name, description, price, quantity, url }
-
+try {
     const res = await fetch("/products", {
         method: 'POST',
         body: JSON.stringify(body),
@@ -47,13 +43,19 @@ async function postProducts() {
             'Content-Type': 'application/json'
         }
     });
-    const data = res.json()
-
-    alert('successo')
-    console.log(data)
-
+    if (res.status != 201 ) {
+        swal("Good job!", "You clicked the button!", "error");
+        return;
+    }
+    const data = await res.json();
+    swal("Good job!", "You clicked the button!", "success");
+    console.log(data);    
+}
+catch {
+    debugger; //não funfa
 }
 
+}
 // console.log(res)
 // window.location.href = '/'
 

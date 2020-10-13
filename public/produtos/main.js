@@ -5,12 +5,12 @@ const URL = window.location.hostname.includes('localhost')
 async function getAll() {
     const res = await fetch(URL);
     const data = await res.json();
-
+    
     var { name, id, description, price, url } = data;
 
     for (let i = 0; i < data.length; i++) {
 
-        let container = document.getElementById('container');
+        let container = document.getElementById('mostrar');
 
         let divCard = document.createElement('div');
         let img = document.createElement('img');

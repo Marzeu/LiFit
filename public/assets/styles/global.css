@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 :root {
     font-size: 100%;
     --color-background: #92f04c;
@@ -21,7 +22,7 @@
     --color-box-footer: #FAFAFC;
 }
 
-h5 {
+h6 {
     /* cores da paleta */
     color: #92f14c;
     color: #18430b;
@@ -49,8 +50,23 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;    
+    background-color:var(--color-background);
+}
+
+.card a, h1, h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card a {
+    color: black;
+    transition: 200ms;
+}
+
+.card a:hover {
+    color: var(--color-secondary);
 }
 
 .container {
@@ -148,3 +164,17 @@ nav.primary ul li a:hover {
 .button:hover {
     background-color: var(--color-primary);
 }
+
+footer {
+    padding: 16px 0;    
+}
+
+footer a {
+    color: white;
+    transition: 200ms;
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+

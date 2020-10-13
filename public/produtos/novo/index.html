@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastrar Produto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../assets/styles/global.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="/">
+                <div class="logo">
+                    <h1>Lifit</h1>
+                    <h2>Sua vida mais saudável</h2>
+                </div>
+            </a>
+
+            <form class="search">
+                <input type="text" name="filter" placeholder="Buscar por Produtos" value="">
+            </form>
+
+            <nav class="primary">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="material-icons">add</i>
+                            Novo Anúncio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons">account_circle</i>
+                            Minha Conta
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div>
+        <section class="container form">
+
+            <form>
+                <div class="header">
+                    <h3>Cadastrar Produto</h3>
+                </div>
+
+                <div class="fields">
+
+                    <div class="item">
+                        <div>Nome:</div>
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Digite o nome do produto" value="">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>Descrição:</div>
+                        <div>
+                            <textarea name="description" id="description"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>url:</div>
+                        <div>
+                            <input type="text" name="url" id="url" placeholder="Cole a url da imagem do produto" value="">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>Valor:</div>
+                        <div>
+                            <input type="text" name="price" id="price" placeholder="Preço do Produto" value="">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>Quantidade:</div>
+                        <div>
+                            <input type="number" name="quantity" id="quantity" placeholder="Estoque Disponível" value="">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>Disponível ?</div>
+                        <div>
+                            <span>
+                                <input type="radio" name="status" value="1">Sim
+                            </span>
+                            <span>
+                                <input type="radio" name="status" value="0">Não
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="button" type="button" onclick="postProducts()">Salvar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        Desenvolvido por<a href="https://github.com/Marzeu/LiFit"> Ratel
+        </a>
+    </footer>
+
+    <script src='main.js'></script>
+</body>
+
+</html>

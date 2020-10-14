@@ -60,8 +60,8 @@ function sweetAlert() {
         text: "Deseja cadastrar outro produto?",
         icon: "success",
         buttons: {
-            cancel: true,
-            confirm: true,
+            cancel: "Não",
+            confirm: { text: "Sim", value: true }
         },
     })
         .then((cadastrarNovo) => {

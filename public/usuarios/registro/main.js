@@ -118,6 +118,58 @@ const Validade = {
             error,
             value
         };
-
     }
 }
+
+const URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080/users'
+    : 'https://api-lifit.herokuapp.com/users';
+
+async function postUsers() {
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const cpfCnpj = document.getElementById('cpf_cnpj').value;
+    const cep = document.getElementById('cep').value;
+    const address = document.getElementById('address').value;
+
+    const body = { name, email, password, cpfCnpj, cep, address };
+    try {
+        const res = await fetch(URL, {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        });
+        if (res.status != 201) {
+            swal("Não deu.", "Algo de errado aconteceu", "error");
+            return;
+        };
+        sweetAlert();
+    }
+    catch {
+        swal("Não deu.", "Algo de errado aconteceu", "error");
+    };
+};
+
+function sweetAlert() {
+    swal({
+        title: "Usuário cadastrado com sucesso!",
+        text: "Seja bem vindo, deseja cadastrar um produto?",
+        icon: "success",
+        buttons: {
+            cancel: "Não",
+            confirm: { text: "Sim", value: true }
+        },
+    })
+        .then((cadastrarNovo) => {
+            if (cadastrarNovo) {
+                window.location.href = '/produtos/novo'
+            } else {
+                window.location.href = '/'
+            };
+        });
+};

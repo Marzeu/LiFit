@@ -1,7 +1,7 @@
 // máscara que converte o valor em no campo price do tipo text em dinheiro 
 
-const input = document.querySelector('input[name="price"]');
-input.addEventListener("keydown", function (e) {
+const moneyMask = document.querySelector('input[name="price"]');
+moneyMask.addEventListener("keydown", function (e) {
 
     setTimeout(function () {
         let value = e.target.value;
@@ -60,8 +60,8 @@ function sweetAlert() {
         text: "Deseja cadastrar outro produto?",
         icon: "success",
         buttons: {
-            cancel: true,
-            confirm: true,
+            cancel: "Não",
+            confirm: { text: "Sim", value: true }
         },
     })
         .then((cadastrarNovo) => {

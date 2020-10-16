@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
 :root {
     font-size: 100%;
     --color-background: #92f04c;
@@ -50,11 +49,11 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;    
-    background-color:var(--color-background);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
 }
 
-.card a, h1, h4{
+.card a, h1, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +165,7 @@ nav.primary ul li a:hover {
 }
 
 footer {
-    padding: 16px 0;    
+    padding: 16px 0;
 }
 
 footer a {
@@ -177,4 +176,3 @@ footer a {
 footer a:hover {
     color: var(--color-secondary);
 }
-

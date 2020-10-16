@@ -143,6 +143,22 @@
       "quantity": "",
       "url": "",
       "id": 18
+    },
+    {
+      "name": "Amorzinho do papai",
+      "description": "meu amorzinho doce",
+      "price": "R$ 111,22",
+      "quantity": "1",
+      "url": "https://avatars1.githubusercontent.com/u/49075654?s=460&u=a1ac7762c3a6c23d9bb08c56efccd74e63cc4de9&v=4",
+      "id": 19
+    },
+    {
+      "name": "pesadelo da sua cabeça",
+      "description": "vc viaja",
+      "price": "R$ 0,12",
+      "quantity": "1",
+      "url": "https://avatars1.githubusercontent.com/u/49075654?s=460&u=a1ac7762c3a6c23d9bb08c56efccd74e63cc4de9&v=4",
+      "id": 20
     }
   ],
   "clients": [
@@ -152,7 +168,13 @@
   ],
   "users": [
     {
-      "name": "Marzeu"
+      "id": 1,
+      "name": "Marzeu",
+      "email": "marzeu@ratel.com.br",
+      "password": "12345",
+      "cpf_cnpj": "00000000000",
+      "cep": "88045610",
+      "address": "rua iguaçu, 162"
     }
   ],
   "teachers": [
@@ -161,14 +183,14 @@
       "alias": "Carioca",
       "photo": "https://avatars0.githubusercontent.com/u/20189484?s=460&v=4",
       "github": "https://github.com/oliveiramb",
-      "id": 1
+      "id": 2
     },
     {
       "name": "Lucas Naspolini",
       "alias": "Criciuma",
       "photo": "https://avatars0.githubusercontent.com/u/67108278?s=460&u=5add5bb5b265e6c5eaef22f041a802a4da538123&v=4",
       "github": "https://github.com/Pixelikas",
-      "id": 2
+      "id": 1
     }
   ],
   "devs": [

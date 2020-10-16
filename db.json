@@ -101,8 +101,8 @@
       "email": "marzeu@ratel.com.br",
       "password": "12345",
       "cpf_cnpj": "00000000000",
-      "cep": "88045610",
-      "address": "rua iguaçu, 162"
+      "cep": "00000000",
+      "address": "rua paraná, 666"
     }
   ],
   "teachers": [

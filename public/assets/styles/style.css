@@ -6,8 +6,12 @@
     background-position: center center;
 }
 
-.banner-title {
-    color: #11d147;
+.container.text-center {    
+    margin-top: 30px;
+}
+
+.banner-title {     
+    color: #11d147;    
 }
 
 .img-brand {

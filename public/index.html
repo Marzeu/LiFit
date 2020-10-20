@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Home</title>
+    <title>Lifit</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="assets\bootstrap-4.5.2-dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.1-web/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='./assets/styles/global.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./assets/styles/global.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='styles.css'> -->
 
 </head>
 
 <body>
 
-    <header>
+    <!-- <header>
         <div class="container">
             <a href="/">
                 <div class="logo">
@@ -67,8 +71,104 @@
         </a>
         <p>Conheça o<a href="https://github.com/Marzeu/LiFit"> código
         </a></p>
-    </footer>
+    </footer> -->
 
-</body>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light lifit-navbar">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/SPOILER_lifitso.png" alt="Lifit" class="img-brand">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Produtos <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Login <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cadastre-se
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Como empresa</a>
+                            <a class="dropdown-item" href="#">Como Usuário</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid banner">
+            <div class="container text-center">
+                <h1 class="banner-title">O melhor e mais saudável você encontra aqui.</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="search-bar">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control form-control-lg mr-sm-2" type="search"
+                                        placeholder="Buscar por endereço" aria-label="Search">
+                                    <button class="btn btn-success my-2 my-sm-0 btn-lg" type="submit">Buscar</button>
+                                </form>
+                            </span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="container" >
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center font-weight-light popular-products"> Produtos populares </h2>
+                </div>
+            </div>
+
+            <div class="row bottom-buffer" id="mostrar">
+                <div class="col-sm-4 mt-4" >
+                    <div class="card h-100">
+
+                        <div class="card-img d-flex flex-wrap align-items-center">
+                            <img src="assets/images/bc4903f017.jpg" class="card-img-top mx-auto" alt="...">
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Laranja</h5>
+                            <p class="card-text">A laranja é o fruto da laranjeira, uma árvore da família Rutaceae.
+                                nhomnhomnom</p>
+                            <p class="text-muted"> R$ 1,00 / kg</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-success">Ver produto</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container footer border-bottom  text-muted">
+            <p> <i class="fas fa-comments"></i> Fale conosco </p>
+            <p> <i class="fas fa-envelope"></i> lifit@suporte.com </p>
+            <p> <i class="fas fa-info-circle"></i> <a href=""> Sobre nós </a> </p> <!-- Criar página -->
+            <p> <i class="fas fa-handshake"></i> Em parceira com <a href="http://sc.senai.br/"> SENAI Florianópolis
+                    (CTAI). </a> </p>
+        </div>
+        <div class="container-fluid text-center p-3">
+            <i class="far fa-copyright"> </i> 2020 - Desenvolvido por grupo RATEL™.
+        </div>
+        <script src="assets\scripts\jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="assets\bootstrap-4.5.2-dist\js\bootstrap.min.js"></script>
+        <script src="main.js"></script>
+
+    </body>
 
 </html>

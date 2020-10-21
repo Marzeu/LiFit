@@ -35,12 +35,6 @@ async function getAll() {
         pCardText.className = "card-text";
         pCardText.innerHTML = data[i].description;
 
-        // ulListGroup.className = "list-group list-group-flush";
-        // ulListGroup.innerHTML = "ulListGroup";
-
-        // liListGroupItem.className = "list-group-item";
-        // liListGroupItem.innerHTML = "liListGroupItem";
-
         divCardBodyBotton.className = "card-body";
         divCardBodyBotton.innerHTML = "Preço ";
 
@@ -49,11 +43,11 @@ async function getAll() {
 
         divCardBody.appendChild(h5CardTitle);
         divCardBody.appendChild(pCardText);
-        // ulListGroup.appendChild(liListGroupItem);
+        
         divCardBodyBotton.appendChild(aCardLink);
         divCard.appendChild(img);
         divCard.appendChild(divCardBody);
-        // divCard.appendChild(ulListGroup);
+       
         divCard.appendChild(divCardBodyBotton);
         container.appendChild(divCard);
         

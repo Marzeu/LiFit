@@ -134,11 +134,12 @@ async function postUsers() {
     const cep = document.getElementById('cep').value;
     const address = document.getElementById('address').value;
 
-    const body = { name, email, password, cpfCnpj, cep, address };
+    const data = { name, email, password, cpfCnpj, cep, address };
+
     try {
         const res = await fetch(URL, {
             method: 'POST',
-            body: JSON.stringify(body),
+            body: JSON.stringify(data),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -149,6 +150,7 @@ async function postUsers() {
             return;
         };
         sweetAlert();
+
     }
     catch {
         swal("Não deu.", "Algo de errado aconteceu", "error");
@@ -156,20 +158,40 @@ async function postUsers() {
 };
 
 function sweetAlert() {
-    swal({
-        title: "Usuário cadastrado com sucesso!",
-        text: "Seja bem vindo, deseja cadastrar um produto?",
-        icon: "success",
-        buttons: {
-            cancel: "Não",
-            confirm: { text: "Sim", value: true }
-        },
-    })
-        .then((cadastrarNovo) => {
-            if (cadastrarNovo) {
-                window.location.href = '/produtos/novo'
-            } else {
-                window.location.href = '/'
-            };
-        });
+
+    const cpfCnpj = document.getElementById('cpf_cnpj').value;
+    const cleanValues = cpfCnpj.replace(/\D/g, "");
+
+    if (cleanValues.length == 14) {
+        swal({
+            title: "Usuário cadastrado com sucesso!",
+            text: "Seja bem vindo, deseja cadastrar um produto?",
+            icon: "success",
+            buttons: {
+                cancel: "Não",
+                confirm: { text: "Sim", value: true }
+            },
+        })
+            .then((cadastrarNovo) => {
+                if (cadastrarNovo) {
+                    window.location.href = '/produtos/novo'
+                } else {
+                    window.location.href = '/'
+                };
+            });
+
+    } else {
+        swal({
+            title: "Usuário cadastrado com sucesso!",
+            text: "Seja bem vindo!",
+            icon: "success",
+            buttons: {
+                confirm: { text: "Ok", value: true }
+            },
+        })
+            .then((cadastrarNovo) => {
+                if (cadastrarNovo)
+                    window.location.href = '/'
+            });
+    };
 };

@@ -1,16 +1,30 @@
+// Variavel criada para a definir se o endereço em que as requisições são localhost ou na
+// heroku, se o localhost não estiver disponivel ele define a heroku.
 const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/products'
     : 'https://api-lifit.herokuapp.com/products';
 
-async function getAll() {
-    const res = await fetch(URL);
-    const data = await res.json();
+let lifitProducts = [];
 
-    var { name, id, description, price, url } = data;
+// Funlção para trazer os dados para mostrar na pagina.
+async function loadProducts() {
+    try {
+        const res = await fetch(URL);
+        lifitProducts = await res.json();
+        searchProducts(lifitProducts);
+    } catch (err) {
+        console.error(err);
+    }
+};
 
-    for (let i = 0; i < data.length; i++) {
+// filtro de produtos
 
-        let container = document.getElementById('mostrar');
+const productsList = document.getElementById('productsList');
+
+// função para listar os produtos
+function searchProducts(products) {
+    clearList();
+    for (const product of products) {
 
         // let divRowBottom = document.createElement('div');
         let divCol = document.createElement('div');
@@ -33,18 +47,18 @@ async function getAll() {
         divCardImg.className = "card-img d-flex flex-wrap align-items-center";
 
         img.className = "card-img-top mx-auto";
-        img.src = data[i].url;
+        img.src = product.url;
 
         divCardBody.className = "card-body";
 
         h5CardTitle.className = "card-title";
-        h5CardTitle.innerHTML = data[i].name;
+        h5CardTitle.innerHTML = product.name;
 
         pCardText.className = "card-text";
-        pCardText.innerHTML = data[i].description;
+        pCardText.innerHTML = product.description;
 
         pCardTextMuted.className = "text-muted";
-        pCardTextMuted.innerHTML = data[i].price + " R$/kg";
+        pCardTextMuted.innerHTML = product.price + " R$/kg";
 
         divCardFotter.className = "card-footer";
 
@@ -62,12 +76,62 @@ async function getAll() {
         divCardH100.appendChild(divCardImg);
         divCardH100.appendChild(divCardBody);
         divCardH100.appendChild(divCardFotter);
-        
+
         divCol.appendChild(divCardH100);
 
         // divRowBottom.appendChild(divCol);
 
-        container.appendChild(divCol);
+        productsList.appendChild(divCol);
+
+    }
+
+    if (products.length === 0)
+        noResults();
+}
+
+// função para limpar a lista
+function clearList() {
+    while (productsList.firstChild) {
+        productsList.removeChild(productsList.firstChild);
     }
 }
-getAll();
+
+function noResults() {
+
+    const item = document.createElement('div');
+    item.className = "col-sm-4 mt-4";
+    const text = document.createTextNode('Produto não encontrado');
+    item.appendChild(text);
+    productsList.appendChild(item);
+}
+
+function relevency(value, searchTerm) {
+    if (value === searchTerm) {
+        return 2;
+    } else if (value.startsWith(searchTerm)) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+const searchInput = document.getElementById('searchBar');
+searchInput.addEventListener('input', (e) => {
+    
+    let value = e.target.value;
+
+    document.getElementById('h2').innerHTML = '';
+
+    if (value && value.trim().length > 0) {
+        value = value.trim().toLowerCase();
+        searchProducts(lifitProducts.filter(product => {
+            return product.name.includes(value);
+        }).sort((productA, productB) => {
+            return relevency(productB.name, value) - relevency(productA.name, value);
+        }));
+    } else {
+        clearList();
+    }
+});
+
+loadProducts();

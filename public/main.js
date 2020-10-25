@@ -82,7 +82,6 @@ function searchProducts(products) {
         // divRowBottom.appendChild(divCol);
 
         productsList.appendChild(divCol);
-
     }
 
     if (products.length === 0)
@@ -117,8 +116,8 @@ function relevency(value, searchTerm) {
 
 const searchInput = document.getElementById('searchBar');
 searchInput.addEventListener('input', (e) => {
-    
-    let value = e.target.value;
+
+    let value = e.target.value;  
 
     document.getElementById('h2').innerHTML = '';
 
@@ -133,5 +132,26 @@ searchInput.addEventListener('input', (e) => {
         clearList();
     }
 });
+
+const searchButton = document.getElementById('searchButton'); 
+
+searchButton.addEventListener('click', () => {
+    
+    let value = searchInput.value;
+    console.log(value);
+
+    document.getElementById('h2').innerHTML = '';
+
+    if (value && value.trim().length > 0) {
+        value = value.trim().toLowerCase();
+        searchProducts(lifitProducts.filter(product => {
+            return product.name.includes(value);
+        }).sort((productA, productB) => {
+            return relevency(productB.name, value) - relevency(productA.name, value);
+        }));
+    } else {
+        clearList();
+    }
+})
 
 loadProducts();

@@ -134,12 +134,12 @@ async function postUsers() {
     const cep = document.getElementById('cep').value;
     const address = document.getElementById('address').value;
 
-    const data = { name, email, password, cpfCnpj, cep, address };
+    const user = { name, email, password, cpfCnpj, cep, address };
 
     try {
         const res = await fetch(URL, {
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify(user),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

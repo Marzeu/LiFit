@@ -2,11 +2,11 @@
   "products": [
     {
       "name": "banana",
-      "id": 1,
-      "description": "banana, bananinha, bananão",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1"
+      "description": "apenas bananas",
+      "price": "R$ 27,99",
+      "quantity": "50",
+      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1",
+      "id": 1
     },
     {
       "name": "maçã",
@@ -18,11 +18,11 @@
     },
     {
       "name": "pera",
-      "id": 3,
       "description": "pererinha",
-      "price": 3.99,
-      "quantity": "10",
-      "url": "https://www.pensenatural.com.br/wp-content/uploads/2018/09/pera-1.jpg"
+      "price": "3.99",
+      "quantity": "60",
+      "url": "https://www.pensenatural.com.br/wp-content/uploads/2018/09/pera-1.jpg",
+      "id": 3
     },
     {
       "name": "repolho",
@@ -103,7 +103,7 @@
       "cpf_cnpj": "00000000000",
       "cep": "00000000",
       "address": "rua paraná, 666"
-    }    
+    }
   ],
   "teachers": [
     {

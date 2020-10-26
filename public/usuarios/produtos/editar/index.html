@@ -56,7 +56,7 @@
     <div>
         <section class="container form">
 
-            <form method="POST" action="/products?_method=PUT">
+            <form>
 
                 <div class="header">
                     <h3>Alterar Produto</h3>
@@ -100,18 +100,14 @@
                                 value="">
                         </div>
                     </div>
-
-                    <input type="hidden" name="id" value="{{product.id}}">
-
                 </div>
 
-                <button class="button" type="submit">Atualizar</button>
-                <!-- <button class="button" type="button" onclick="postProducts()">Excluir</button> -->
+                <button class="btn btn-success" type="button" onclick="putProducts()">Atualizar</button>
             </form>
 
-            <form action="/products?_method=DELETE" id="form-delete" method="POST">
-                <input type="hidden" name="id" value="{{product.id}}">
-                <button type="submit">Deletar</button>
+            <form id="form-delete">
+
+                <button class="btn btn-success" type="button" onclick="deleteProducts()">Excluir</button>
             </form>
 
         </section>
@@ -135,13 +131,13 @@
 
     <script>
 
-        const formDelete = document.querySelector("form-delete")
-        formDelete.addEventListener("submit", function (event) {
-            const confirmation = confirm("Deseja Deletar?")
-            if (!confirmation) {
-                event.preventDefault()
-            }
-        })
+        // const formDelete = document.querySelector("form-delete")
+        // formDelete.addEventListener("submit", function (event) {
+        //     const confirmation = confirm("Deseja Deletar?")
+        //     if (!confirmation) {
+        //         event.preventDefault()
+        //     }
+        // })
 
     </script>
 

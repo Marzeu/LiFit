@@ -56,6 +56,10 @@ form .fields {
     margin-bottom: 64px;
 }
 
+.btn.btn-success {
+    margin: 10px;
+}
+
 /* form .item select {
     permite mudar o select padrão do navegador
     -moz-appearance: none;

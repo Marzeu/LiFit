@@ -23,7 +23,7 @@ const displayProducts = (products) => {
             
             <div>
                 <h2>${product.name}</h2>
-                <a href="">editar</a>                
+                <a href="./editar/#${product.id}">editar</a>                
             </div>
         `;
         })

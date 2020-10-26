@@ -2,11 +2,11 @@
   "products": [
     {
       "name": "banana",
-      "id": 1,
-      "description": "banana, bananinha, bananão",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1"
+      "description": "apenas bananas",
+      "price": "R$ 27,99",
+      "quantity": "50",
+      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1",
+      "id": 1
     },
     {
       "name": "maçã",
@@ -18,11 +18,11 @@
     },
     {
       "name": "pera",
-      "id": 3,
       "description": "pererinha",
-      "price": 3.99,
-      "quantity": "10",
-      "url": "https://www.pensenatural.com.br/wp-content/uploads/2018/09/pera-1.jpg"
+      "price": "3.99",
+      "quantity": "60",
+      "url": "https://www.pensenatural.com.br/wp-content/uploads/2018/09/pera-1.jpg",
+      "id": 3
     },
     {
       "name": "repolho",
@@ -49,14 +49,6 @@
       "url": "https://hiperideal.vteximg.com.br/arquivos/ids/167660-1000-1000/27502.jpg?v=636615816147030000"
     },
     {
-      "name": "xuxu",
-      "id": 7,
-      "description": "xuxuzinho",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://www.ibahia.com/fileadmin/user_upload/ibahia/2019/setembro/12/beneficios-do-chuchu_foto.jpg?width=1200&enable=upscale"
-    },
-    {
       "name": "uva",
       "id": 8,
       "description": "vai um vinho?",
@@ -81,12 +73,12 @@
       "url": "https://www.selecoes.com.br/wp-content/uploads/2018/12/iStock-836586846-760x450.jpg"
     },
     {
-      "name": "laranja",
-      "id": 11,
-      "description": "Laranja é bom, cheio de vitamina C para melhorar seu sistema imunológico.",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://www.sodexobeneficios.com.br/data/files/9C/71/E3/25/625D0710064C5A077118F9C2/xos-poderes-da-laranja.jpg.pagespeed.ic.AUB0M9f2IJ.jpg"
+      "name": "azeite",
+      "description": "azeite de oliva",
+      "price": "R$ 250,00",
+      "quantity": "125",
+      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.EcVlTdJjYYiciLlewsZqbgHaE6%26pid%3DApi&f=1",
+      "id": 11
     }
   ],
   "clients": [
@@ -103,7 +95,7 @@
       "cpf_cnpj": "00000000000",
       "cep": "00000000",
       "address": "rua paraná, 666"
-    }    
+    }
   ],
   "teachers": [
     {

@@ -49,14 +49,6 @@
       "url": "https://hiperideal.vteximg.com.br/arquivos/ids/167660-1000-1000/27502.jpg?v=636615816147030000"
     },
     {
-      "name": "xuxu",
-      "id": 7,
-      "description": "xuxuzinho",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://www.ibahia.com/fileadmin/user_upload/ibahia/2019/setembro/12/beneficios-do-chuchu_foto.jpg?width=1200&enable=upscale"
-    },
-    {
       "name": "uva",
       "id": 8,
       "description": "vai um vinho?",
@@ -79,14 +71,6 @@
       "price": 1.99,
       "quantity": "10",
       "url": "https://www.selecoes.com.br/wp-content/uploads/2018/12/iStock-836586846-760x450.jpg"
-    },
-    {
-      "name": "laranja",
-      "id": 11,
-      "description": "Laranja é bom, cheio de vitamina C para melhorar seu sistema imunológico.",
-      "price": 1.99,
-      "quantity": "10",
-      "url": "https://www.sodexobeneficios.com.br/data/files/9C/71/E3/25/625D0710064C5A077118F9C2/xos-poderes-da-laranja.jpg.pagespeed.ic.AUB0M9f2IJ.jpg"
     }
   ],
   "clients": [

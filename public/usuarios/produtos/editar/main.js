@@ -100,7 +100,44 @@ moneyMask.addEventListener("keydown", function (e) {
 // nesse caso tudo o que não for número será substituido por um campo vazio "".
 // O construtor formata para o R$ padrão internacional.
 
+async function deleteProducts() {
+    try {
+        const res = await fetch(`${URL}/${idValue[1]}`, {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        });
+        if (res.status != 200) {
+            swal("Não deu.", "Algo de errado aconteceu", "error");
+            return;
+        };
+        swal({
+            title: "Produto apagado com sucesso!",
+            text: "Deseja apagar outro produto?",
+            icon: "success",
+            buttons: {
+                cancel: "Não",
+                confirm: { text: "Sim", value: true }
+            },
+        })
+            .then((deleteProduct) => {
+                if (deleteProduct) {
+                    window.location.href = '/usuarios/produtos'
+                } else {
+                    window.location.href = '/'
+                };
+            });
+    }
+    catch {
+        swal("Não deu.", "Algo de errado aconteceu", "error");
+    };
+};
+
 getOne();
+
+
 
 
 

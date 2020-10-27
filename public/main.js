@@ -63,6 +63,7 @@ function searchProducts(products) {
         divCardFotter.className = "card-footer";
 
         aBtn.className = "btn btn-success";
+        aBtn.href = `./produto/#${product.id}`;
         aBtn.innerHTML = "Ver produto";
 
         divCardImg.appendChild(img);

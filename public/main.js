@@ -58,7 +58,7 @@ function searchProducts(products) {
         pCardText.innerHTML = product.description;
 
         pCardTextMuted.className = "text-muted";
-        pCardTextMuted.innerHTML = product.price + " R$/kg";
+        pCardTextMuted.innerHTML = product.price;
 
         divCardFotter.className = "card-footer";
 

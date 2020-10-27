@@ -77,9 +77,7 @@ function searchProducts(products) {
         divCardH100.appendChild(divCardBody);
         divCardH100.appendChild(divCardFotter);
 
-        divCol.appendChild(divCardH100);
-
-        // divRowBottom.appendChild(divCol);
+        divCol.appendChild(divCardH100);        
 
         productsList.appendChild(divCol);
     }

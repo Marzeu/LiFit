@@ -53,6 +53,9 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 ---
 ## ⚙️ Funcionalidades
 
+[x] CRUD de produtos;
+[x] CRUD de usuários;
+
 <!-- - [x] Empresas ou entidades podem se cadastrar na plataforma web enviando:
   - [x] uma imagem do ponto de coleta
   - [x] nome da entidade, email e whatsapp

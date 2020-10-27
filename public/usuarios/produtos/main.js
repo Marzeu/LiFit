@@ -6,7 +6,7 @@ const productsList = document.getElementById('productsList');
 
 let lifitProducts = [];
 
-const loadProducts = async () => {
+async function loadProducts() {
     try {
         const res = await fetch(URL);
         lifitProducts = await res.json();
@@ -16,21 +16,24 @@ const loadProducts = async () => {
     }
 };
 
-const displayProducts = (products) => {
+function displayProducts(products) {
     const htmlString = products
         .map((product) => {
-            return `
-            
-            <div>
-                <h2>${product.name}</h2>
-                <a href="./editar/#${product.id}">editar</a>                
-            </div>
-        `;
+            return `    
+            <tr>
+                <td>
+                    <span style="background-image: url(${product.url})"></span>
+                    ${product.name}
+                </td>
+                <td>${product.description}</td>
+                <td>${product.quantity}</td>
+                <td>${product.price}</td>
+                <td><a href="./editar/#${product.id}">editar</a></td> 
+            </tr>
+            `;
         })
         .join('');
     productsList.innerHTML = htmlString;
 };
 
 loadProducts();
-
-

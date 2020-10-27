@@ -1,17 +1,13 @@
 .banner {
     background-image: url('../images/banner.jpg');
-    height: 400px;
+    height:400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-.container.text-center {    
-    margin-top: 30px;
-}
-
-.banner-title {     
-    color: #11d147;    
+.banner-title {
+    color: #11d147;
 }
 
 .img-brand {
@@ -26,16 +22,13 @@
     margin-top: 20px;
 }
 
-.row {
-    display: flex;
-}
 
 .card-img {
     display: block;
     height: 200px;
 }
 
-.card-img img {
+.card-img  img {
     background: #FFFFFF;
     max-width: 200px;
     border: none;
@@ -56,4 +49,17 @@
 
 .footer {
     margin-top: 150px;
+}
+
+.input-group-text {
+    background: #28a745;
+}
+
+.login-form {
+    background-image: url(../images/login.png);
+    background-position: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
 }

@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel='stylesheet' type='text/css' media='screen' href='../../assets/styles/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/styles/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 
+    <script src="https://kit.fontawesome.com/d0f9cebf15.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
@@ -34,18 +34,18 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Produtos <span class="sr-only"></span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Login <span class="sr-only"></span></a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cadastre-se
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./usuarios/registro/index.html">Como empresa</a>
-                            <a class="dropdown-item" href="./usuarios/registro/index.html">Como Usuário</a>
+                            <a class="dropdown-item" href="../usuarios/registro">Como empresa</a>
+                            <a class="dropdown-item" href="../usuarios/registro">Como Usuário</a>
                         </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Login <span class="sr-only"></span></a>
                     </li>
                 </ul>
             </div>
@@ -56,67 +56,71 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                  <h2 class="text-center font-weight-bold popular-products"> Login </h2>
+                    <h2 class="text-center font-weight-bold popular-products"> Login </h2>
                 </div>
             </div>
         </div>
         <div class="container login-form">
-             <section class="user-register container form">
-            <form>
+            <section class="user-register container form">
+                <form>
 
-                <div class="fields">
-                    <div class="item">
-                        <div>Email</div>
-                        <div class="input">
-                            <input type="email" name="email" id="email" placeholder="Digite o seu email" value=""
-                                onblur="Validade.apply(this, 'isEmail')">
+                    <div class="fields">
+                        <div class="item">
+                            <div>Email</div>
+                            <div class="input">
+                                <input type="email" name="email" id="email" placeholder="Digite o seu email" value=""
+                                    onblur="Validade.apply(this, 'isEmail')">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="item">
-                        <div>Senha</div>
-                        <div class="input">
-                            <input type="password" name="password" id="password" placeholder="Digite uma senha" value=""
-                                required>
+                        <div class="item">
+                            <div>Senha</div>
+                            <div class="input">
+                                <input type="password" name="password" id="password" placeholder="Digite uma senha"
+                                    value="" required>
+                            </div>
                         </div>
+                        <small> <a style="cursor: pointer;" data-toggle="modal" data-target="#recuperar-senha"
+                                class="text-primary"> Esqueceu sua senha? </a> </small>
                     </div>
-                    <small> <a style="cursor: pointer;" data-toggle="modal" data-target="#recuperar-senha" class="text-primary"> Esqueceu sua senha? </a> </small>
-                </div>
-                <button class="btn btn-success" type="button" onclick="postUsers()">Entrar</button>
-            </form>
-        </section>
+                    <button class="btn btn-success" type="button" onclick="postUsers()">Entrar</button>
+                </form>
+            </section>
         </div>
-       
+
     </div>
     <div class="modal fade" id="recuperar-senha" tabindex="-1" aria-labelledby="recuperar-senha" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="recuperar-senha"> Recuperação de conta </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recuperar-senha"> Recuperação de conta </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="email-recuperacao">Email </label>
+                        <input type="email" class="form-control" id="email-recuperacao"
+                            aria-describedby="email-recuperacao">
+                        <small id="emailHelp" class="form-text text-muted">Nós enviaremos um código de recuperação para
+                            seu e-mail.</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Enviar</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="email-recuperacao">Email </label>
-                    <input type="email" class="form-control" id="email-recuperacao" aria-describedby="email-recuperacao">
-                    <small id="emailHelp" class="form-text text-muted">Nós enviaremos um código de recuperação para seu e-mail.</small>
-                  </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success">Enviar</button>
-            </div>
-          </div>
         </div>
     </div>
+
     <footer>
 
         <div class="container footer border-bottom  text-muted">
             <p> <i class="fas fa-comments"></i> Fale conosco </p>
             <p> <i class="fas fa-envelope"></i> lifit@suporte.com </p>
-            <p> <i class="fas fa-info-circle"></i> <a href=""> Sobre nós </a> </p> <!-- Criar página -->
+            <p> <i class="fas fa-info-circle"></i> <a href="../aboutus"> Sobre nós </a> </p> <!-- Criar página -->
             <p> <i class="fas fa-handshake"></i> Em parceira com <a href="http://sc.senai.br/"> SENAI Florianópolis
                     (CTAI). </a> </p>
         </div>
@@ -129,6 +133,9 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"

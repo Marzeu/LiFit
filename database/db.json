@@ -169,10 +169,10 @@
   ],
   "cart": [
     {
-    "quantity": "0",
-    "price": "",
-    "products": "",
-    "total": ""
+    "quantity": "5",
+    "price": "0",
+    "products": "0",
+    "total": "0"
     }
   ]
 }

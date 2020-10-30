@@ -1,13 +1,19 @@
+:root {
+    font-size: 100%;
+    --color-primary: #11d147;
+    --btn-primary: #28a745;
+}
+
 .banner {
     background-image: url('../images/banner.jpg');
-    height:400px;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 .banner-title {
-    color: #11d147;
+    color: var(--color-primary);
 }
 
 .img-brand {
@@ -22,13 +28,12 @@
     margin-top: 20px;
 }
 
-
 .card-img {
     display: block;
     height: 200px;
 }
 
-.card-img  img {
+.card-img img {
     background: #FFFFFF;
     max-width: 200px;
     border: none;
@@ -40,7 +45,8 @@
 }
 
 .btn-theme-color {
-    background: #11d147;
+    background: var(--color-primary);
+    ;
 }
 
 .popular-products {
@@ -62,4 +68,43 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 4px;
+}
+
+header div.container-nav {
+    grid-template-columns: 220px auto 315px;
+    grid-gap: 8px;
+}
+
+.material-icons {
+    color: var(--color-primary);
+    line-height: unset;
+}
+
+li.cart a {
+    position: relative;
+}
+
+li.cart a span {
+    background-color: var(--color-primary);
+    color: rgba(0, 0, 0, .9);
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    /* font-weight: bolder; */
+    position: absolute;
+    top: 2px;
+    right: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li.cart a span:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.material-icons:hover {
+    color: black
 }

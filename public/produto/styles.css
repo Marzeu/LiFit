@@ -57,6 +57,7 @@
 
 .product-single .price-buy .buy button {
     background-color: red;
+    border-color: red;
     font-size: 14px;
     letter-spacing: 00.4px;
 }

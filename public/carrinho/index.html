@@ -51,68 +51,8 @@
         </nav>
     </header>
 
-    <div class="cart container">
-        <h3>Carrinho</h3>
-        <div class="header">
-            <p>Produto</p>
-            <p>Preço</p>
-            <p>Qtd.</p>
-        </div>
-
-        <div class="items">
-            <div class="item">
-                <a href="/products/1">
-                    <img src="http://placehold.it/500x500" alt="Imagem do Produto">
-                    <span class="title">Nome do Produto</span>
-                </a>
-
-                <span class="price">12,90</span>
-
-                <div class="quantity-control">
-                    <form action="/card/remove" method="post">
-                        <button class="remove">
-                            <i class="material-icons">remove_circle_outline</i>
-                        </button>
-                    </form>
-
-                    <span class="quantity">2</span>
-
-                    <form action="/card/add" method="post">
-                        <button class="add">
-                            <i class="material-icons">add_circle_outline</i>
-                        </button>
-                    </form>
-                </div>
-
-                <form class="trash " action="/card/delete" method="post">
-                    <button class="delete">
-                        <i class="material-icons">delete</i>
-                    </button>
-                </form>
-            </div>
-
-            <div class="total">
-                <p>Total</p>
-                <span>preço formatado</span>
-            </div>
-
-            <div class="actions">
-                <a href="/products/search" class="btn btn-success shop">Continuar comprando</a>
-
-                <form action="/orders" method="post">
-                    <button class="btn btn-success order">
-                        Realizar Pedido
-                    </button>
-                </form>                
-            </div>
-
-        </div>
+    <div id="itemsInCar">
     </div>
-    <div class="cart container empty">
-        <p>Seu carrinho está vazio</p>
-        <a href="/products/search" class="btn btn-success">Compre agora</a>
-    </div>
-
 
     <footer>
 

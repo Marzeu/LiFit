@@ -166,13 +166,5 @@
       "url": "",
       "email": "ratelequipe@gmail.com"
     }
-  ],
-  "cart": [
-    {
-    "quantity": "5",
-    "price": "0",
-    "products": "0",
-    "total": "0"
-    }
   ]
 }

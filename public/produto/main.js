@@ -59,6 +59,7 @@ function displayProducts(product) {
 
     let buttonBtn = document.createElement('button');
     buttonBtn.className = "btn btn-success";
+    buttonBtn.addEventListener("click", () => { createLocalStorage() });
     buttonBtn.innerHTML = "Comprar";
 
     divBuy.appendChild(buttonBtn);

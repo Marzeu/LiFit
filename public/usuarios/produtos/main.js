@@ -27,7 +27,7 @@ function displayProducts(products) {
                 </td>
                 <td>${product.description}</td>
                 <td>${product.quantity}</td>
-                <td>${product.price}</td>
+                <td>${formatPrice(product.price)}</td>
                 <td><a href="./editar/#${product.id}">editar</a></td> 
             </tr>
             `;
@@ -35,5 +35,12 @@ function displayProducts(products) {
         .join('');
     productsList.innerHTML = htmlString;
 };
+
+function formatPrice(price) {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(price / 100);
+}
 
 loadProducts();

@@ -6,7 +6,8 @@ async function postProducts() {
 
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
-    const price = document.getElementById('price').value;
+    const price = document.getElementById('price').value.filter(c => c >= "0" && c <= "9");
+    debugger;
     const quantity = document.getElementById('quantity').value;
     const url = document.getElementById('url').value;
 

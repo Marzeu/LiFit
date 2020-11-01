@@ -52,7 +52,7 @@ function displayProducts(product) {
 
     let divPrice = document.createElement('div');
     divPrice.className = "price"
-    divPrice.innerHTML = product.price;
+    divPrice.innerHTML = formatPrice(product.price);
 
     let divBuy = document.createElement('div');
     divBuy.className = "buy"

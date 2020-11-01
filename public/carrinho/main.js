@@ -17,7 +17,7 @@ function saveToStorage() {
 
 function displayItemsInCar(items) {
 
-    if (items.length !== 0) {       
+    if (items.length !== 0) {
         const headerCar = `
             <div class="cart container">
                 <h3>Carrinho</h3>
@@ -37,7 +37,7 @@ function displayItemsInCar(items) {
                             <img src="${item.url}" alt="">
                             <span class="title">${item.name}</span>
                         </a>
-                        <span class="price">${item.price}</span>                        
+                        <span class="price">${formatPrice(item.price)}</span>                        
                         <div class="quantity-control">                            
                                 <button class="remove" onclick="remove(${item.id})">
                                     <i class="material-icons">remove_circle_outline</i>
@@ -56,9 +56,9 @@ function displayItemsInCar(items) {
             .join('');
 
         const actionButtons = ` 
-                        <div class="total">
+                        <div class="total" id="showTotal">
                             <p>Total</p>
-                            <span>${item.total}</span>
+                            <span id="total">0</span>
                         </div>                            
                     <div class="actions">
                         <a href="/" class="btn btn-success shop">Continuar comprando</a>
@@ -87,7 +87,7 @@ function displayItemsInCar(items) {
 function add(id) {
 
     let i = order.products.findIndex(products => products.id == id);
-    let quantity = Number(document.getElementById(id).innerHTML);
+    let quantity = order.products[i].quantity;
     quantity++;
     order.products[i].quantity = quantity;
 
@@ -96,14 +96,17 @@ function add(id) {
 }
 
 function remove(id) {
-
+  
     let i = order.products.findIndex(products => products.id == id);
-    let quantity = Number(document.getElementById(id).innerHTML);
+    let quantity = order.products[i].quantity;
     quantity--;
-    if (quantity === 0) {
+
+    if (quantity == 0) {
         deleteItem(id);
     }
-    order.products[i].quantity = quantity;
+    else {
+        order.products[i].quantity = quantity;
+    }
 
     saveToStorage();
     displayItemsInCar(order.products);
@@ -118,12 +121,25 @@ function deleteItem(id) {
 }
 
 function totalPrice() {
+    let total = 0;
+
+    let showTotal = document.getElementById('showTotal');
 
     for (let i = 0; i < order.products.length; i++) {
-        total = order.products[i].price * order.products[i].quantity;
+        total = total + (order.products[i].price) * (order.products[i].quantity);
     }
-    return total;
+
+    let spanTotal = document.getElementById('total');
+    spanTotal.innerHTML = `${formatPrice(total)}`;
+    showTotal.appendChild(spanTotal);
 }
 
+function formatPrice(price) {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(price / 100);
+}
 
 listOrder();
+

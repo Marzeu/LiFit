@@ -20,7 +20,7 @@ async function getOne() {
         document.getElementById('name').value = product.name;
         document.getElementById('description').value = product.description;
         document.getElementById('url').value = product.url;
-        document.getElementById('price').value = product.price;
+        document.getElementById('price').value = formatPrice(product.price);
         document.getElementById('quantity').value = product.quantity;
 
     } catch (err) {
@@ -33,9 +33,9 @@ async function putProducts() {
 
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
-    const price = document.getElementById('price').value;
+    const price = document.getElementById('price').value.split("").filter(c => c >= "0" && c <= "9").join("");    
     const quantity = document.getElementById('quantity').value;
-    const url = document.getElementById('url').value;
+    const url = document.getElementById('url').value;        
 
     const body = { name, description, price, quantity, url };
 
@@ -84,9 +84,9 @@ async function deleteProducts() {
         })
             .then((deleteProduct) => {
                 if (deleteProduct) {
-                    window.location.href = '/usuarios/produtos'
+                    window.location.href = '/usuarios/produtos'
                 } else {
-                    window.location.href = '/'
+                    window.location.href = '/'
                 };
             });
     }
@@ -108,11 +108,18 @@ function sweetAlert() {
     })
         .then((updateProduct) => {
             if (updateProduct) {
-                window.location.href = '/usuarios/produtos'
+                window.location.href = '/usuarios/produtos'
             } else {
-                window.location.href = '/'
+                window.location.href = '/'
             };
         });
 };
+
+function formatPrice(price) {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(price / 100);
+}
 
 getOne();

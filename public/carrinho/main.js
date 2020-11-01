@@ -1,5 +1,5 @@
 var order = {
-    products: [{}]
+    products: []
 };
 
 function listOrder() {
@@ -17,7 +17,7 @@ function saveToStorage() {
 
 function displayItemsInCar(items) {
 
-    if (items.length !== 0) {
+    if (items.length !== 0) {       
         const headerCar = `
             <div class="cart container">
                 <h3>Carrinho</h3>
@@ -50,19 +50,19 @@ function displayItemsInCar(items) {
                             <button class="delete" onclick="deleteItem(${item.id})">
                                 <i class="material-icons">delete</i>
                             </button>                       
-                    </div>            
+                    </div>                         
         `;
             })
             .join('');
 
-        const actionButtons = `
-                    <div class="total">
-                        <p>Total</p>
-                        <span>preço formatado</span>
-                    </div>
+        const actionButtons = ` 
+                        <div class="total">
+                            <p>Total</p>
+                            <span>${item.total}</span>
+                        </div>                            
                     <div class="actions">
-                        <a href="/products/search" class="btn btn-success shop">Continuar comprando</a>
-                        <form action="/orders" method="post">
+                        <a href="/" class="btn btn-success shop">Continuar comprando</a>
+                        <form">
                             <button class="btn btn-success order">
                                 Realizar Pedido
                             </button>
@@ -76,11 +76,12 @@ function displayItemsInCar(items) {
         const emptyCar = `
         <div class="cart container empty">
             <p>Seu carrinho está vazio</p>
-            <a href="/products/search" class="btn btn-success">Compre agora</a>
+            <a href="/" class="btn btn-success">Compre agora</a>
         </div>
         `;
         itemsInCar.innerHTML = emptyCar;
     }
+    totalPrice();
 };
 
 function add(id) {
@@ -115,5 +116,14 @@ function deleteItem(id) {
     saveToStorage();
     displayItemsInCar(order.products);
 }
+
+function totalPrice() {
+
+    for (let i = 0; i < order.products.length; i++) {
+        total = order.products[i].price * order.products[i].quantity;
+    }
+    return total;
+}
+
 
 listOrder();

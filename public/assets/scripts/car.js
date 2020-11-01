@@ -16,32 +16,33 @@
 // }
 
 var order = {
-    products: [{}]
+    products: []
 };
 
 function createLocalStorage() {
     order.products = JSON.parse(localStorage.getItem('order'));
 
+    if (order.products == null) {
+        order.products = [];
+    }
+
     let item = order.products.find(products => products.id == idValue[1]);
 
     if (!item) {
-
-        if (order.products == null) {
-            order.products = [];
-        }
 
         let id = product.id;
         let name = product.name;
         let price = product.price;
         let url = product.url;
         let quantity = 1;
-        order.products.push({ id: `${id}`, name: `${name}`, price: `${price}`, url: `${url}`, quantity: `${quantity}` });
+        let total = 0;
+        order.products.push({ id: `${id}`, name: `${name}`, price: `${price}`, url: `${url}`, quantity: `${quantity}`, total: `${total}` });
 
         let orderJson = JSON.stringify(order.products);
         localStorage.setItem('order', orderJson);
-    
+
     } else {
-        
+
         let i = order.products.findIndex(products => products.id == idValue[1]);
         let quantity = 1;
         quantity++;

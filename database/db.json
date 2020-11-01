@@ -3,7 +3,7 @@
     {
       "name": "banana",
       "description": "apenas bananas",
-      "price": "R$ 27,99",
+      "price": 2799,
       "quantity": "50",
       "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1",
       "id": 1

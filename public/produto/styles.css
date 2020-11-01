@@ -9,7 +9,7 @@
     grid-gap: 24px;
     padding: 32px 24px;
     margin: 32px auto;
-    box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, .6);
     border: 1px solid #efefef;
     border-radius: 4px;
 }
@@ -55,9 +55,15 @@
     font-weight: bold;
 }
 
-.product-single .price-buy .buy button {
+.product-single .price-buy .buy button {    
     background-color: red;
     border-color: red;
     font-size: 14px;
     letter-spacing: 00.4px;
+    transition: 300ms;
+}
+
+.product-single .price-buy .buy button:hover {   
+    background-color: var(--danger);
+    border-color: var(--danger);    
 }

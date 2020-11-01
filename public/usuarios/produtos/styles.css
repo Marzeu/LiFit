@@ -7,7 +7,7 @@ div {
     justify-content: center;
 }
 
-.my-products a{
+.my-products a {
     text-decoration: none;
 }
 
@@ -17,23 +17,22 @@ div {
 }
 
 .new-product {
-    background-color: #11d147;
+    color: black;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
     font-size: 12px;
-    border-radius: 4px;    
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+.new-product:hover {
+    color: black;
 }
 
 h2 {
     text-align: center;
 }
-
-/* .card a {
-    color: blue;
-    transition: 200ms;
-} */
 
 .list-group-item {
     background-color: #f5f5f5;
@@ -58,9 +57,12 @@ h2 {
     text-align: left;
 }
 
+tr {
+    border-bottom: 1px solid #d9d9d9;
+}
+
 td, th {
     padding: 16px;
-    border-bottom: 1px solid #d9d9d9;
 }
 
 th {
@@ -90,13 +92,17 @@ tbody tr td:first-child span {
 }
 
 tbody tr td:last-child a {
-    background-color: #11d147;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: black;
     font-size: 12px;
     border-radius: 4px;
+    transition: 200ms;
+}
+
+tbody tr td:last-child a:hover {
+    color: black;
 }
 
 .table-container thead tr th:last-child, td:last-child {

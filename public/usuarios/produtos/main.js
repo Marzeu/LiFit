@@ -28,7 +28,7 @@ function displayProducts(products) {
                 <td>${product.description}</td>
                 <td>${product.quantity}</td>
                 <td>${formatPrice(product.price)}</td>
-                <td><a href="./editar/#${product.id}">editar</a></td> 
+                <td><a class="btn-success" href="./editar/#${product.id}">editar</a></td> 
             </tr>
             `;
         })

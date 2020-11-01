@@ -72,6 +72,7 @@ function displayItemsInCar(items) {
         `;
         const total = headerCar + htmlString + actionButtons;
         itemsInCar.innerHTML = total;
+        totalPrice();
     } else {
         const emptyCar = `
         <div class="cart container empty">
@@ -80,8 +81,7 @@ function displayItemsInCar(items) {
         </div>
         `;
         itemsInCar.innerHTML = emptyCar;
-    }
-    totalPrice();
+    }    
 };
 
 function add(id) {

@@ -104,10 +104,6 @@ body {
     cursor: pointer;
 }
 
-.delete {
-    color: red;
-}
-
 .total {
     margin-top: 16px;
     text-align: right;
@@ -143,10 +139,22 @@ body {
 }
 
 .cart.container.empty p {
-    font-size: 18px;    
+    font-size: 18px;
 }
 
 .cart.container.empty a {
     width: 240px;
     margin: 16px auto;
+}
+
+.item .title {
+    transition: 200ms;
+}
+
+.item .title:hover {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+.item a {
+    text-decoration: none;
 }

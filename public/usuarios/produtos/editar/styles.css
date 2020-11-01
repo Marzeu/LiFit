@@ -1,13 +1,14 @@
 /* Estilo da página de cadastro de produtos. */
-body{
-    background-color: var(--color-background);
+
+body {
+    background-color: var(--color-background);    
 }
 
 section.form {
     background-color: white;
     padding: 32px 24px;
     margin: 32px auto;
-    box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, .9);
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, .6);
     border: 1px solid #efefef;
     border-radius: 4px;
     max-width: 700px;
@@ -36,10 +37,7 @@ form .item>div:nth-child(1) {
     margin-bottom: 8px;
 }
 
-form .item input[type="text"],
-form .item input[type="number"],
-form .item textarea,
-form .item select {
+form .item input[type="text"], form .item input[type="number"], form .item textarea, form .item select {
     width: 95%;
     padding: 8px 16px;
     box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
@@ -57,7 +55,28 @@ form .fields {
 }
 
 .btn.btn-success {
-    margin: 10px;
+    margin: 10px 0;
+    transition: 200ms;
+}
+
+.btn.btn-success + .btn.btn-success {
+    margin-left: 10px;
+}
+
+#form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn.btn-success.delete {
+    background-color: red;
+    border-color: red;    
+    transition: 200ms;
+}
+
+.btn.btn-success.delete:hover {
+    background-color: var(--danger);
+    border-color: var(--danger);
 }
 
 /* form .item select {

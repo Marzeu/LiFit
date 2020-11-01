@@ -1,7 +1,15 @@
 :root {
     font-size: 100%;
     --color-primary: #11d147;
+    --color-secondary: #04D361;
     --btn-primary: #28a745;
+    --text-primary: #6c757d;
+}
+
+.card {
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, .6);
+    border: 1px solid #efefef;
+    border-radius: 4px;
 }
 
 .banner {
@@ -46,7 +54,6 @@
 
 .btn-theme-color {
     background: var(--color-primary);
-    ;
 }
 
 .popular-products {
@@ -58,7 +65,7 @@
 }
 
 .input-group-text {
-    background: #28a745;
+    background: var(--btn-primary);
 }
 
 .login-form {
@@ -107,4 +114,22 @@ li.cart a span:hover {
 
 .material-icons:hover {
     color: black
+}
+
+.nav-link {
+    transition: 200ms;
+}
+
+.nav-link:hover  {
+    color: var(--color-secondary) !important;
+}
+
+footer a {
+    color: var(--text-primary);
+    transition: 200ms;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--color-secondary);
 }

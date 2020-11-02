@@ -1,30 +1,20 @@
-// const cartURL = window.location.hostname.includes('localhost')
-//     ? 'http://localhost:8080/cart'
-//     : 'https://api-lifit.herokuapp.com/cart';
-
-// var car;
-
-// async function loadCar() {
-//     try {
-//         const res = await fetch(cartURL);
-//         car = await res.json();
-//         carIcon();
-
-//     } catch (err) {
-//         console.log(err)
-//     }
-// }
-
 var order = {
     products: []
 };
 
-function createLocalStorage() {
+var car;
+
+function getLocalStorage() {
     order.products = JSON.parse(localStorage.getItem('order'));
 
     if (order.products == null) {
         order.products = [];
     }
+   
+}
+
+function createLocalStorage() {
+    getLocalStorage();
 
     let item = order.products.find(products => products.id == idValue[1]);
 
@@ -62,9 +52,9 @@ function createLocalStorage() {
     })
         .then((updateProduct) => {
             if (updateProduct) {
-                window.location.href = '/'
+                window.location.href = '/'
             } else {
-                window.location.href = '/carrinho'
+                window.location.href = '/carrinho'
             };
         });
 }
@@ -76,74 +66,38 @@ function formatPrice(price) {
     }).format(price / 100);
 }
 
+function carIcon() {
+    getLocalStorage();
 
-// async function addCar() {
+    car = order.products.length
 
-//     const id = product.id;
-//     const name = product.name;
-//     const price = product.price;
-//     const url = product.url;
-//     const quantity = 1;
+    let cart = document.getElementById('cart');
 
-//     const body = { id, name, price, url, quantity };
+    let a = document.createElement('a');
+    a.href = "/carrinho";
 
-//     try {
-//         const res = await fetch(cartURL, {
-//             method: 'POST',
-//             body: JSON.stringify(body),
-//             headers: {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json',
-//             }
-//         });
+    let iMaterialIcons = document.createElement('i');
+    iMaterialIcons.className = 'material-icons';
+    iMaterialIcons.innerHTML = 'shopping_cart';
 
-//         if (res.status != 201) {
-//             swal("Não deu.", "Algo de errado aconteceu", "error");
-//             return;
-//         };
-//         swal({
-//             title: "Produto adicionado ao carrinho com sucesso!",
-//             text: "Continuar comprando?",
-//             icon: "success",
-//             buttons: {
-//                 cancel: "Não",
-//                 confirm: { text: "Sim", value: true }
-//             },
-//         })
-//             .then((updateProduct) => {
-//                 if (updateProduct) {
-//                     window.location.href = '/'
-//                 } else {
-//                     window.location.href = '/carrinho'
-//                 };
-//             });
+    cart.appendChild(a);
+    a.appendChild(iMaterialIcons);
 
-//     }
-//     catch {
-//         swal("Não deu.", "Algo de errado aconteceu", "error");
-//     };
-// };
+    let spanCartStatusInfo = document.createElement('span');
+    spanCartStatusInfo.id = 'cart-status-info';    
+    spanCartStatusInfo.style.visibility = "hidden";
+    a.appendChild(spanCartStatusInfo);
+    if (car != 0) {
+        refreshCar();
+    }
+}
 
-// function carIcon() {
+function refreshCar() {
+    getLocalStorage();  
+    car = order.products.length
+    let showCarNumber = document.getElementById('cart-status-info');
+    showCarNumber.innerHTML = car;
+    showCarNumber.style.visibility = "visible";
+}
 
-//     let cart = document.getElementById('cart');
-
-//     let a = document.createElement('a');
-//     a.href = "/carrinho";
-
-//     let iMaterialIcons = document.createElement('i');
-//     iMaterialIcons.className = 'material-icons';
-//     iMaterialIcons.innerHTML = 'shopping_cart';
-
-//     cart.appendChild(a);
-//     a.appendChild(iMaterialIcons);
-
-//     if (car[0].quantity && car[0].total > 0) {
-//         let spanCartStatusInfo = document.createElement('span');
-//         spanCartStatusInfo.id = 'cart-status-info';
-//         spanCartStatusInfo.innerHTML = car[0].total;
-//         a.appendChild(spanCartStatusInfo);
-//     }
-// }
-
-// loadCar();
+carIcon();

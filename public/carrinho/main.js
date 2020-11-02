@@ -16,7 +16,7 @@ function saveToStorage() {
 }
 
 function displayItemsInCar(items) {
-
+    refreshCar();
     if (items.length !== 0) {
         const headerCar = `
             <div class="cart container">
@@ -81,7 +81,7 @@ function displayItemsInCar(items) {
         </div>
         `;
         itemsInCar.innerHTML = emptyCar;
-    }    
+    }
 };
 
 function add(id) {
@@ -96,7 +96,7 @@ function add(id) {
 }
 
 function remove(id) {
-  
+
     let i = order.products.findIndex(products => products.id == id);
     let quantity = order.products[i].quantity;
     quantity--;
@@ -109,7 +109,7 @@ function remove(id) {
     }
 
     saveToStorage();
-    displayItemsInCar(order.products);
+    displayItemsInCar(order.products);    
 }
 
 function deleteItem(id) {
@@ -142,4 +142,5 @@ function formatPrice(price) {
 }
 
 listOrder();
+
 

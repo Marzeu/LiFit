@@ -83,7 +83,7 @@
 
 //     let small = document.createElement('small');
 //     small.className = "text-success float-right";
-    
+
 //     let i = document.createElement('i');
 //     i.className = "fas fa-seedling";
 //     i.innerHTML = " Produto Vegano";
@@ -101,7 +101,7 @@
 
 //     let buttonBtnSuccess = document.createElement('button');
 //     buttonBtnSuccess.className = "btn btn-success ml-2";
-    
+
 //     let iFas = document.createElement('i');
 //     iFas.className = "fas fa-cart-plus";
 //     iFas.innerHTML = " Adicionar ao carrinho";
@@ -112,7 +112,7 @@
 //     divCardBody.appendChild(h5);
 
 //     divCardBody.appendChild(pCardText);
-    
+
 //     divCardBody.appendChild(pTextMuted);
 
 //     divFormInline.appendChild(buttonBtnSuccess);
@@ -128,7 +128,7 @@
 //     divRowNoGutters.appendChild(divColMd8);
 
 //     productsList.appendChild(divRowNoGutters);
-   
+
 // };
 
 // função para padronizar a moeda
@@ -161,16 +161,78 @@ const Cart = {
         }
         return this;
     },
-    addOne(product){
-        // ver se o produto já existe no carrinho
-        let inCard = this.items.find(item => item.product.id == product.id)
-    },
-    removeOne(productId){},
-    delete(productId){}
-}
 
-const product = {
-    id: 1,
-    price: 199,
-    quantity: 2
+    addOne(product) {
+        // ver se o produto já existe no carrinho
+        let inCart = this.getCartItem(product.id);
+
+        // se não existe
+        if (!inCart) {
+            inCart = {
+                product: {
+                    ...product,
+                    formattedPrice: formatPrice(product.price)
+                },
+                quantity: 0,
+                price: 0,
+                formattedPrice: formatPrice(0)
+            }
+
+            this.items.push(inCart);
+        }
+        // verifica se a quantidade no carrinho ultrapassa a quantidade disponivel
+        if (inCart.quantity >= product.quantity) return this;
+
+        inCart.quantity++;
+        inCart.price = inCart.product.price * inCart.quantity;
+        inCart.formattedPrice = formatPrice(inCart.price);
+
+        this.total.quantity++;
+        this.total.price += inCart.product.price;
+        this.total.formattedPrice = formatPrice(this.total.price);
+
+        return this;
+    },
+
+    removeOne(productId) {
+        //pegar item do carrinho
+        const inCart = this.getCartItem(productId);
+
+        if (!inCart) return this;
+
+        //atualizar o item
+        inCart.quantity--;
+        inCart.price = inCart.product.price * inCart.quantity;
+        inCart.formattedPrice = formatPrice(inCart.price);
+
+        // atualizar o carrinho
+        this.total.quantity--;
+        this.total.price -= inCart.product.price;
+        this.total.formattedPrice = formatPrice(this.total.price);
+
+        if (inCart.quantity < 1) {
+            const itemIndex = this.items.indexOf(inCart);
+            this.items.splice(itemIndex, 1);
+            return this;
+        }
+        return this;
+    },
+
+    delete(productId) {
+        const inCart = this.getCartItem(productId);
+        if (!inCart) return this;
+
+        if (this.items.length > 0) {
+            this.total.quantity -= inCart.quantity;
+            this.total.price -= (inCart.product.price * inCart.quantity);
+            this.total.formattedPrice = formatPrice(this.total.price);
+        }
+
+        this.items = this.items.filter(item => inCart.product.id != item.product.id)
+        return this;
+    },
+
+    getCartItem(productId) {
+        return this.items.find(item => item.product.id == productId);
+    }
 }

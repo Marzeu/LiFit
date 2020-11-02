@@ -1,14 +1,5 @@
-/* body {
+body {
     background-color:var(--color-background);
-}
-
-footer a {
-    color: white;
-    transition: 200ms;
-}
-
-footer a:hover {
-    color: var(--color-secondary);
 }
 
 .card a, h1, h4{
@@ -22,5 +13,6 @@ footer a:hover {
 }
 
 .card a:hover {
-    color: var(--color-secondary);
-} */
+    color: black;
+}
+

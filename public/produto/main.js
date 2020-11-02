@@ -52,13 +52,14 @@ function displayProducts(product) {
 
     let divPrice = document.createElement('div');
     divPrice.className = "price"
-    divPrice.innerHTML = product.price;
+    divPrice.innerHTML = formatPrice(product.price);
 
     let divBuy = document.createElement('div');
     divBuy.className = "buy"
 
     let buttonBtn = document.createElement('button');
     buttonBtn.className = "btn btn-success";
+    buttonBtn.addEventListener("click", () => { createLocalStorage() });
     buttonBtn.innerHTML = "Comprar";
 
     divBuy.appendChild(buttonBtn);

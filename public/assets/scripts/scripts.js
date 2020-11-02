@@ -1,6 +1,6 @@
-// const URL = window.location.hostname.includes('localhost')
-//     ? 'http://localhost:8080/users'
-//     : 'https://api-lifit.herokuapp.com/users';
+const URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080/users'
+    : 'https://api-lifit.herokuapp.com/users';
 
 // CRUD é uma sigla para definir verbos que são usadas nas aplicações.
 // cada letra significa um verbo, C para Create (criar),
@@ -15,7 +15,7 @@
 
 // GET para trazer as informações da url para o frontend.
 
-const URL = 'http://localhost:8080/users';
+// const URL = 'http://localhost:8080/users';
 
 async function getAll() {
     const res = await fetch(URL);

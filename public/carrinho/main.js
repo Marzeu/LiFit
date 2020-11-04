@@ -64,7 +64,7 @@ function displayItemsInCar(items) {
                         <a href="/" class="btn btn-success shop">Continuar comprando</a>
                         <form">
                             <button class="btn btn-success order">
-                                Realizar Pedido
+                                Finalizar Pedido
                             </button>
                         </form>
                     </div>

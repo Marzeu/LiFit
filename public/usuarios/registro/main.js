@@ -2,35 +2,60 @@ const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/users'
     : 'https://api-lifit.herokuapp.com/users';
 
-async function postUsers() {
+var users = [];
 
+async function loadUsers() {
+    try {
+        const res = await fetch(URL);
+        users = await res.json();
+
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+async function postUsers() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const passwordRepeat = document.getElementById('passwordRepeat').value;
     const cpfCnpj = document.getElementById('cpf_cnpj').value;
     const cep = document.getElementById('cep').value;
     const address = document.getElementById('address').value;
+        
+    let existedUser = users.find(users => users.email === email) || users.find(users => users.cpfCnpj === cpfCnpj);
 
-    const user = { name, email, password, cpfCnpj, cep, address };
+    if (email === existedUser.email) {
+        swal("Não deu", "Email já cadastrado", "error");
 
-    try {
-        const res = await fetch(URL, {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            }
-        });
-        if (res.status != 201) {
+    } else if (password != passwordRepeat) {
+        swal("Não deu", "Senha não confere", "error");
+
+    } else if (cpfCnpj === existedUser.cpfCnpj) {
+        swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
+
+    } else {
+        const user = { name, email, password, cpfCnpj, cep, address };
+
+        try {
+            const res = await fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(user),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            });
+            if (res.status != 201) {
+                swal("Não deu.", "Algo de errado aconteceu", "error");
+                return;
+            };
+            sweetAlert();
+
+        }
+        catch {
             swal("Não deu.", "Algo de errado aconteceu", "error");
-            return;
         };
-        sweetAlert();
-
-    }
-    catch {
-        swal("Não deu.", "Algo de errado aconteceu", "error");
     };
 };
 
@@ -51,9 +76,9 @@ function sweetAlert() {
         })
             .then((cadastrarNovo) => {
                 if (cadastrarNovo) {
-                    window.location.href = '/produtos/novo'
+                    window.location.href = '/produtos/novo'
                 } else {
-                    window.location.href = '/'
+                    window.location.href = '/'
                 };
             });
 
@@ -68,7 +93,9 @@ function sweetAlert() {
         })
             .then((cadastrarNovo) => {
                 if (cadastrarNovo)
-                    window.location.href = '/'
+                    window.location.href = '/'
             });
     };
 };
+
+loadUsers();

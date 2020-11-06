@@ -22,7 +22,7 @@ function welcome() {
     span.style.visibility = "visibility";
     span.className = "nav-link"
 
-    a.href = '/usuarios';
+    a.href = '/usuario';
     a.innerHTML = user[0].name;
 
     span.appendChild(a)

@@ -22,6 +22,7 @@ function validation() {
     let password = document.getElementById('password').value;
     let index = users.findIndex(users => users.email === email);
     let name = users[index].name;
+    let id = users[index].id;
 
     if (isLogged === false) {
         for (i = 0; i < users.length; i++) {
@@ -31,16 +32,16 @@ function validation() {
             }
         }
         if (isLogged === true) {
-            session.push({ name: `${name}`, logged: `${isLogged}` });
+            session.push({ name: `${name}`, logged: `${isLogged}`, id: `${id}` });
             let sessionJson = JSON.stringify(session);
             localStorage.setItem('session', sessionJson);
-            swal("Bem vindo!", "Login efetuado com sucesso", "success");
-            // setTimeout(function () {
-            //     window.location.href = '/';
-            // }, 2000);
+            swal("Bem vindo!", "Login efetuado com sucesso.", "success")
+            .then(() => {
+                window.location.href = '/'
+            });
 
         } else {
-            swal("Email ou senha errados", "Talvez você precise fazer o cadastro", "error")
+            swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
         }
     }
 }

@@ -2,7 +2,8 @@ const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/users'
     : 'https://api-lifit.herokuapp.com/users';
 
-let user = JSON.parse(localStorage.getItem('session'));
+let user= [];
+user = JSON.parse(localStorage.getItem('session'));
 
 // GET pegar apenas um item por id
 async function getOneUser() {
@@ -18,7 +19,7 @@ async function getOneUser() {
 
         document.getElementById('name').value = user.name;
         document.getElementById('email').value = user.email;
-        document.getElementById('cpf_cnpj').value = user.cpf_cnpj;
+        document.getElementById('cpf_cnpj').value = user.cpfCnpj;
         document.getElementById('cep').value = user.cep;
         document.getElementById('address').value = user.address;
 
@@ -59,9 +60,9 @@ async function putUser() {
                 return;
             };
             swal("Usuário atualizado com sucesso!", "Obrigado!", "success")
-            .then(() => {
-                window.location.href = '/'
-            });
+                .then(() => {
+                    window.location.href = '/'
+                });
         }
         catch {
             swal("Não deu.", "Algo de errado aconteceu.", "error");

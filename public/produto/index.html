@@ -34,21 +34,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
+                        <li class="logged" id="logged">                                                       
+                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Produtos <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Cadastre-se
+                                Login
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./usuarios">Como empresa</a>
-                                <a class="dropdown-item" href="./usuarios">Como Usuário</a>
+                                <a class="dropdown-item" href="../login">Login</a>
+                                <a class="dropdown-item" href="../logout">Logout</a>
                             </div>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="./login">Login <span class="sr-only"></span></a>
+                            <a class="nav-link" href="../usuario/registro">Cadastre-se <span class="sr-only"></span></a>
                         </li>
                         <li class="cart" id="cart">
                         </li>
@@ -98,6 +100,7 @@
 
     <script src="main.js"></script>
     <script src="../assets/scripts/car.js"></script>
+    <script src="../assets/scripts/logged.js"></script>
 </body>
 
 </html>

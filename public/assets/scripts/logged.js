@@ -2,7 +2,7 @@ var user = [];
 
 function getLocalStorage() {
 
-    if (localStorage.length === 0) {
+    if (localStorage.length === 0 || localStorage.length === 1) {
         let isLogged = false;
         user = [];
         user.push({ logged: `${isLogged}` });

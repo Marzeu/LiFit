@@ -46,6 +46,9 @@
     max-width: 200px;
     border: none;
 }
+.dropdown-item:hover {
+    background-color: var(--color-secondary);
+}
 
 .card-footer {
     background: transparent;

@@ -6,6 +6,21 @@ let users = [];
 let isLogged = false;
 let session = [];
 
+function getLocalStorage() {
+
+    if (localStorage.length === 0) {
+        let isLogged = false;
+        user = [];
+        user.push({ logged: `${isLogged}` });
+        let userJson = JSON.stringify(user);
+        localStorage.setItem('session', userJson);
+
+    } else {
+        user = JSON.parse(localStorage.getItem('session'));
+    }
+    isLoggedIn();
+}
+
 async function loadUsers() {
     try {
         const res = await fetch(URL);
@@ -17,13 +32,11 @@ async function loadUsers() {
 };
 
 function isLoggedIn() {
-    if (localStorage.length !== 0) {
+    if (user[0].logged === "true") {
         swal("Você já está logado.", "Obrigado!", "error")
             .then(() => {
                 window.location.href = '/';
             })
-    } else {
-        validation()
     }
 }
 
@@ -96,4 +109,4 @@ const Validade = {
 }
 
 loadUsers();
-isLoggedIn();
+getLocalStorage();

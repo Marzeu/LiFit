@@ -1,0 +1,88 @@
+/* Estilo da página de cadastro de produtos. */
+
+body {
+    background-color: var(--color-background);
+}
+
+section.form {
+    background-color: white;
+    padding: 32px 24px;
+    margin: 32px auto;
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, .6);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    max-width: 700px;
+    width: 90%;
+}
+
+section.form .header h3 {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+form .item {
+    margin-bottom: 16px;
+}
+
+form .item>div:nth-child(1) {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form .item input[type="text"], form .item input[type="number"], form .item input[name="email"], .form .item input[name="password"], .form .item input[name="passwordRepeat"], .form input[name="cpf_cnpj"], .form input[name="cep"] {
+    width: 95%;
+    padding: 8px 16px;
+    box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form .item input[name="email"], .form .item input[name="cpf_cnpj"] {
+    color: grey;
+}
+
+form .item input[name="email"], .form .item input[name="password"], .form .item input[name="passwordRepeat"], .form input[name="cpf_cnpj"], .form input[name="cep"] {
+    max-width: 60%;
+}
+
+form .fields {
+    margin-bottom: 64px;
+}
+
+.btn.btn-success {
+    margin: 10px 0;
+    transition: 200ms;
+}
+
+.btn.btn-success+.btn.btn-success {
+    margin-left: 10px;
+}
+
+#form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn.btn-success.delete {
+    background-color: red;
+    border-color: red;
+    transition: 200ms;
+}
+
+.btn.btn-success.delete:hover {
+    background-color: var(--danger);
+    border-color: var(--danger);
+}
+
+.input .error {
+    color: #e74c3c;
+}

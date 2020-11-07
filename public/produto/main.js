@@ -91,9 +91,9 @@ function sweetAlert() {
     })
         .then((updateProduct) => {
             if (updateProduct) {
-                window.location.href = '/usuarios/produtos'
+                window.location.href = '/usuarios/produtos'
             } else {
-                window.location.href = '/'
+                window.location.href = '/'
             };
         });
 };

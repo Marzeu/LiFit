@@ -6,8 +6,7 @@ async function postProducts() {
 
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
-    const price = document.getElementById('price').value.filter(c => c >= "0" && c <= "9");
-    debugger;
+    const price = document.getElementById('price').value.filter(c => c >= "0" && c <= "9");    
     const quantity = document.getElementById('quantity').value;
     const url = document.getElementById('url').value;
 
@@ -44,9 +43,9 @@ function sweetAlert() {
     })
         .then((cadastrarNovo) => {
             if (cadastrarNovo) {
-                window.location.href = '/produtos/novo'
+                window.location.href = '/produtos/novo'
             } else {
-                window.location.href = '/'
+                window.location.href = '/'
             };
         });
 };

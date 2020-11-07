@@ -1,17 +1,29 @@
 var user = [];
 
 function getLocalStorage() {
-    
-    user = JSON.parse(localStorage.getItem('session'));
 
-    if (user == null) {
+    if (localStorage.length === 0) {
+        let isLogged = false;
         user = [];
-    } else if (user[0].logged === "true") {
+        user.push({ logged: `${isLogged}` });
+        let userJson = JSON.stringify(user);
+        localStorage.setItem('session', userJson);
+
+    } else {
+        user = JSON.parse(localStorage.getItem('session'));
+    }
+    if (user[0].logged === "true") {
         welcome();
+    } else {
+        // swal("Você precisa estar Logado", "Obrigado!", "error")
+        //     .then(() => {
+        //         window.location.href = '/login';
+        //     })
     }
 }
 
-function welcome() {   
+
+function welcome() {
 
     let logged = document.getElementById('logged');
 

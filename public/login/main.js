@@ -16,6 +16,17 @@ async function loadUsers() {
     }
 };
 
+function isLoggedIn() {
+    if (localStorage.length !== 0) {
+        swal("Você já está logado.", "Obrigado!", "error")
+            .then(() => {
+                window.location.href = '/';
+            })
+    } else {
+        validation()
+    }
+}
+
 function validation() {
 
     let email = document.getElementById('email').value;
@@ -36,9 +47,9 @@ function validation() {
             let sessionJson = JSON.stringify(session);
             localStorage.setItem('session', sessionJson);
             swal("Bem vindo!", "Login efetuado com sucesso.", "success")
-            .then(() => {
-                window.location.href = '/'
-            });
+                .then(() => {
+                    window.location.href = '/'
+                });
 
         } else {
             swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
@@ -84,5 +95,5 @@ const Validade = {
     }
 }
 
-
 loadUsers();
+isLoggedIn();

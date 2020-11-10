@@ -12,6 +12,10 @@
     border-radius: 4px;
 }
 
+.card-body .card-title {
+    text-transform: capitalize;
+}
+
 .banner {
     background-image: url('../images/banner.jpg');
     height: 400px;

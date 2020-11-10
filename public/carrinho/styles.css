@@ -75,6 +75,7 @@ body {
 
 .item .title {
     color: #222;
+    text-transform: capitalize;
 }
 
 .item .price {

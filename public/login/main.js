@@ -5,10 +5,15 @@ const URL = window.location.hostname.includes('localhost')
 let users = [];
 let isLogged = false;
 let session = [];
+let user = [];
+let order = [];
 
 function getLocalStorage() {
 
-    if (localStorage.length === 0) {
+    order = JSON.parse(localStorage.getItem('order'));
+    user = JSON.parse(localStorage.getItem('session'));
+
+    if (user === null) {
         let isLogged = false;
         user = [];
         user.push({ logged: `${isLogged}` });
@@ -32,6 +37,7 @@ async function loadUsers() {
 };
 
 function isLoggedIn() {
+
     if (user[0].logged === "true") {
         swal("Você já está logado.", "Obrigado!", "error")
             .then(() => {
@@ -45,12 +51,16 @@ function validation() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let index = users.findIndex(users => users.email === email);
-    let name;
-    let id; 
+    let name = "";
+    let id = "";
 
-    if (name != undefined) {
+    if (index === 0) {
         name = users[index].name;
         id = users[index].id;
+    }
+
+    debugger
+    if (name == "undefined") {
     } else {
         swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
     }

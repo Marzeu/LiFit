@@ -45,14 +45,23 @@ function validation() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let index = users.findIndex(users => users.email === email);
-    let name = users[index].name;
-    let id = users[index].id;
+    let name;
+    let id; 
+
+    if (name != undefined) {
+        name = users[index].name;
+        id = users[index].id;
+    } else {
+        swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
+    }
 
     if (isLogged === false) {
         for (i = 0; i < users.length; i++) {
             if (users[i].email === email && users[i].password === password) {
 
                 isLogged = true;
+            } else {
+                swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
             }
         }
         if (isLogged === true) {

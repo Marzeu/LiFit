@@ -10,53 +10,52 @@ function listOrder() {
     displayItemsInCar(order.products);
 };
 
-function saveToStorage() {
-    let orderJson = JSON.stringify(order.products);
-    localStorage.setItem('order', orderJson);
-}
 
 function displayItemsInCar(items) {
     refreshCar();
     if (items.length !== 0) {
         const headerCar = `
             <div class="cart container">
-                <h3>Resumo do seu pedido:</h3>
+                <div class="order-sucess">
+                    <div class="sucess-lottie"></div>
+                    <h3>Pedido Realizado com Sucesso</h3>
+                    <h4>Resumo do seu pedido:</h4>
+                </div>    
                 <div class="header">
                     <p>Produto</p>                   
                     <p>Qtd. </p>
                 </div>
-            `;
-
+        `;
         const htmlString = items
             .map((item) => {
                 return `
                 <div class="items">
                     <div class="item">
-                        <p >
+                        <p>
                             <img src="${item.url}" alt="">
                             <span class="title">${item.name}</span>
                         </p>                                               
                             <span class="quantity" id="${item.id}">${item.quantity}</span> 
-                        </div>          
-                    </div>                         
+                    </div>          
+                </div>                         
         `;
             })
             .join('');
 
         const actionButtons = ` 
-                        <div class="total" id="showTotal">
-                            <p>Total</p>
-                            <span id="total">0</span>
-                        </div>                            
-                    <div class="actions">
-                        <a href="/" class="btn btn-success shop">Continuar comprando</a>
-                        
-                    </div>
+                <div class="total" id="showTotal">
+                    <p>Total</p>
+                    <span id="total">0</span>
+                </div>                            
+                <div class="actions">
+                    <a href="/" class="btn btn-success shop">Comprar Mais</a>                        
                 </div>
+            </div>
         `;
         const total = headerCar + htmlString + actionButtons;
         itemsInCar.innerHTML = total;
         totalPrice();
+        successAnimation();
     } else {
         const emptyCar = `
         <div class="cart container empty">
@@ -67,42 +66,6 @@ function displayItemsInCar(items) {
         itemsInCar.innerHTML = emptyCar;
     }
 };
-
-function add(id) {
-
-    let i = order.products.findIndex(products => products.id == id);
-    let quantity = order.products[i].quantity;
-    quantity++;
-    order.products[i].quantity = quantity;
-
-    saveToStorage();
-    displayItemsInCar(order.products);
-}
-
-function remove(id) {
-
-    let i = order.products.findIndex(products => products.id == id);
-    let quantity = order.products[i].quantity;
-    quantity--;
-
-    if (quantity == 0) {
-        deleteItem(id);
-    }
-    else {
-        order.products[i].quantity = quantity;
-    }
-
-    saveToStorage();
-    displayItemsInCar(order.products);
-}
-
-function deleteItem(id) {
-    let i = order.products.findIndex(products => products.id == id);
-    order.products.splice(i, 1);
-
-    saveToStorage();
-    displayItemsInCar(order.products);
-}
 
 function totalPrice() {
     let total = 0;
@@ -116,36 +79,27 @@ function totalPrice() {
     let spanTotal = document.getElementById('total');
     spanTotal.innerHTML = `${formatPrice(total)}`;
     showTotal.appendChild(spanTotal);
-}
+};
 
 function formatPrice(price) {
     return new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     }).format(price / 100);
-}
+};
 
-function finishOrder() {
-    alertFinishOrder();
-}
+function successAnimation() {
 
-function alertFinishOrder() {
-    swal({
-        title: "Finalizar o pedido?",
-        text: "Obridado por usar a Lifit",
-        icon: "success",
-        buttons: {
-            cancel: "Não",
-            confirm: { text: "Sim", value: true }
-        },
-    })
-        .then((fisishOrder) => {
-            if (fisishOrder) {
-                window.location.href = '/pedido'
-            } else {
-                window.location.href = '/carrinho'
-            };
-        });
+    const element = document.querySelector('.sucess-lottie')
+
+    lottie.loadAnimation({
+        container: element, // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '../assets/lottie/lf30_editor_qqr3saku.json' // the path to the animation json
+    });
 };
 
 listOrder();
+localStorage.removeItem("order");

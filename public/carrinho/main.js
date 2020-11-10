@@ -157,7 +157,7 @@ function alertFinishOrder() {
     })
         .then((fisishOrder) => {
             if (fisishOrder) {
-                window.location.href = '/pedido'
+                window.location.href = '/pedido'                
             } else {
                 window.location.href = '/carrinho'
             };

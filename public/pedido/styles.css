@@ -129,12 +129,8 @@ body {
     color: #444;
 }
 
-.actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 16px;
+.cart.container .actions {
+   text-align: center;
 }
 
 .btn.btn-success.shop {
@@ -165,3 +161,19 @@ body {
 .item a {
     text-decoration: none;
 } */
+
+.order-sucess {
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.order-sucess .sucess-lottie {
+    height: 200px;
+}
+
+.order-sucess a {
+    text-decoration: none;
+    color: var(--color-secondary)
+}

@@ -63,7 +63,7 @@ function displayItemsInCar(items) {
                     <div class="actions">
                         <a href="/" class="btn btn-success shop">Continuar comprando</a>
                         <form">
-                            <button class="btn btn-success order">
+                            <button class="btn btn-success order" onclick="finishOrder()">
                                 Finalizar Pedido
                             </button>
                         </form>
@@ -109,7 +109,7 @@ function remove(id) {
     }
 
     saveToStorage();
-    displayItemsInCar(order.products);    
+    displayItemsInCar(order.products);
 }
 
 function deleteItem(id) {
@@ -140,6 +140,29 @@ function formatPrice(price) {
         currency: 'BRL'
     }).format(price / 100);
 }
+
+function finishOrder() {
+    alertFinishOrder();
+}
+
+function alertFinishOrder() {
+    swal({
+        title: "Finalizar o pedido?",
+        text: "Obridado por usar a Lifit",
+        icon: "success",
+        buttons: {
+            cancel: "Não",
+            confirm: { text: "Sim", value: true }
+        },
+    })
+        .then((fisishOrder) => {
+            if (fisishOrder) {
+                window.location.href = '/pedido'                
+            } else {
+                window.location.href = '/carrinho'
+            };
+        });
+};
 
 listOrder();
 

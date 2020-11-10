@@ -16,6 +16,7 @@ body {
 }
 
 .cart.container h3 {
+    text-align: center;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.7px;
@@ -27,7 +28,7 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 100px 100px 30px;
+    grid-template-columns: 1fr 30px;
     grid-gap: 16px;
     margin-bottom: 16px;
     font-weight: 700;
@@ -47,22 +48,26 @@ body {
 
 .item {
     display: grid;
-    grid-template-columns: 1fr 100px 100px 30px;
+    grid-template-columns: 1fr 30px;
     align-items: center;
     grid-gap: 16px;
     padding: 16px 0;
     border-bottom: 1px solid #eee;
 }
 
+.item .quantity {
+    text-align: right;
+}
+
 .item:hover {
     background: rgba(0, 0, 0, .02);
 }
 
-.item>a {
+/* .item>a {
     display: flex;
     align-items: center;
     margin-left: 8px;
-}
+} */
 
 .item img {
     width: 50px;
@@ -74,8 +79,8 @@ body {
 }
 
 .item .title {
-    color: #222;
     text-transform: capitalize;
+    color: #222;
 }
 
 .item .price {
@@ -124,11 +129,8 @@ body {
     color: #444;
 }
 
-.actions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 16px;
+.cart.container .actions {
+   text-align: center;
 }
 
 .btn.btn-success.shop {
@@ -152,10 +154,26 @@ body {
     transition: 200ms;
 }
 
-.item .title:hover {
+/* .item .title:hover {
     text-decoration: none;
     color: var(--color-secondary);
 }
 .item a {
     text-decoration: none;
+} */
+
+.order-sucess {
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.order-sucess .sucess-lottie {
+    height: 200px;
+}
+
+.order-sucess a {
+    text-decoration: none;
+    color: var(--color-secondary)
 }

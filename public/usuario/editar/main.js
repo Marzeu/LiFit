@@ -19,7 +19,7 @@ async function getOneUser() {
 
         document.getElementById('name').value = user.name;
         document.getElementById('email').value = user.email;
-        document.getElementById('cpf_cnpj').value = user.cpfCnpj;
+        document.getElementById('cpf_cnpj').value = user.cpf_cnpj;
         document.getElementById('cep').value = user.cep;
         document.getElementById('address').value = user.address;
 

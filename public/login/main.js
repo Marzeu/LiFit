@@ -58,8 +58,7 @@ function validation() {
         name = users[index].name;
         id = users[index].id;
     }
-
-    debugger
+    
     if (name == "undefined") {
     } else {
         swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")

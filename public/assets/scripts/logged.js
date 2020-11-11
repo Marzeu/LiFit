@@ -1,24 +1,18 @@
-var user = [];
+let user = JSON.parse(localStorage.getItem('session'));
 
 function getLocalStorage() {
 
-    if (localStorage.length === 0 || localStorage.length === 1) {
-        let isLogged = false;
-        user = [];
-        user.push({ logged: `${isLogged}` });
-        let userJson = JSON.stringify(user);
-        localStorage.setItem('session', userJson);
+    if (user === null) {
 
-    } else {
-        user = JSON.parse(localStorage.getItem('session'));
+        user = [];
+        let isLogged = false;
+        user.push({ logged: `${isLogged}` });
     }
+
     if (user[0].logged === "true") {
         welcome();
     } else {
-        // swal("Você precisa estar Logado", "Obrigado!", "error")
-        //     .then(() => {
-        //         window.location.href = '/login';
-        //     })
+        console.log('não logado')
     }
 }
 
@@ -31,7 +25,6 @@ function welcome() {
 
     let span = document.createElement('span');
     span.innerHTML = "Bem vindo " + a;
-    span.style.visibility = "visibility";
     span.className = "nav-link"
 
     a.href = '/usuario';

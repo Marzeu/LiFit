@@ -165,11 +165,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <td align="center">
 <a href="https://github.com/mikaellafranco">
- <img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/65317307?s=460&v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQGeV6w8H6RO7A/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=QNg-Z0ElFFVRYQzYUlKa2Ox15dFhx8s89zz8197wmCI" width="100px;" alt=""/>
  <br />
  <sub><b>Mikaella Franco</b></sub></a>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Mikaella-pink?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marzeu-selau-junior/)](https://www.linkedin.com/in/marzeu-selau-junior/)
+[![Linkedin Badge](https://img.shields.io/badge/-Mikaella-pink?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mikaella-regina-domingues-franco-jorge-1144101b3/)](https://www.linkedin.com/in/mikaella-regina-domingues-franco-jorge-1144101b3/)
 </tr>
 </table>
 

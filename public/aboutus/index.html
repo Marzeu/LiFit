@@ -29,37 +29,86 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
+                    <li class="logged" id="logged">
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Produtos <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Cadastre-se
+                            Login
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../usuarios/registro">Como empresa</a>
-                            <a class="dropdown-item" href="../usuarios/registro">Como Usuário</a>
+                            <a class="dropdown-item" href="../login">Login</a>
+                            <a class="dropdown-item" href="../logout">Logout</a>
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../login">Login <span class="sr-only"></span></a>
+                        <a class="nav-link" href="../usuario/registro">Cadastre-se <span class="sr-only"></span></a>
                     </li>
+                    <li class="cart" id="cart">
+                    </li>
+
                 </ul>
             </div>
         </nav>
-    </header>  
+    </header>
 
     <section>
-        é noix!
+        <div class="history">
+
+            <h2>Nossa história:</h2>
+
+            <h3>Nós ajudamos você a se manter saudável ao alcance de um click.</h3>
+            <div class="text-history">
+                <p>Tudo começou em fatídica noite de sexta-feira no meio da pandemia de 2020, estávamos reunidos em uma
+                    sala
+                    virtual (respeitando as restrições sanitárias) tentando determinar qual seria o tema da nossa SA
+                    (Situação
+                    de
+                    Aprendizagem), éramos alunos do curso de Desenvolvimento de Sistemas no SENAI/SC e a SA era
+                    requisito
+                    para
+                    aprovação no módulo, como estudantes novatos não tínhamos a mínima ideia do que fazer. Em nossa
+                    equipe
+                    já
+                    havia
+                    uma baixa e por essa razão um novo membro entra para equipe, esse membro era a Mikaella e com ela
+                    surgiu
+                    a
+                    ideia
+                    de um marketplace de alimentos saudáveis e então a mágica aconteceu, as ideia fluíram, houve
+                    brainstorm,
+                    o
+                    Lucas
+                    criou o nome Lifit da junção de Life com Fitness e nesse momento nasceu a Lifit, depois disso foram
+                    dois
+                    meses
+                    de árduo trabalho para transformar esse sonho em realidade e por fim chegamos aqui.</p>
+                <p>
+                    A Lifit foi criada para levar alimentos saudáveis para sua casa através de um simples click do
+                    mouse.
+                    Temos
+                    como
+                    objetivo ser a maior marketplace de alimentos saudáveis do Brasil e alcançaremos nosso objetivo
+                    através
+                    de trabalho árduo, confiança, respeito, humanidade e paixão.</p>
+            </div>
+
+        </div>
     </section>
-   
+
+    <section id="devs">
+    </section>
+
     <footer>
 
         <div class="container footer border-bottom  text-muted">
+            <p> <i class="fab fa-github"></i><a href="https://github.com/Marzeu/LiFit"> Conheça o código </a> </p>
             <p> <i class="fas fa-comments"></i> Fale conosco </p>
             <p> <i class="fas fa-envelope"></i> lifit@suporte.com </p>
-            <p> <i class="fas fa-info-circle"></i> <a href="#"> Sobre nós </a> </p> <!-- Criar página -->
+            <p> <i class="fas fa-info-circle"></i> <a href="#"> Sobre nós </a> </p>
             <p> <i class="fas fa-handshake"></i> Em parceira com <a href="http://sc.senai.br/"> SENAI Florianópolis
                     (CTAI). </a> </p>
         </div>
@@ -70,7 +119,6 @@
 
     </footer>
 
-    <!-- scripts padrões -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

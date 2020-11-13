@@ -3,79 +3,63 @@
     {
       "name": "banana",
       "description": "Seu consumo é bem amplo, sendo de forma fresca ou como complementação alimentar. É uma fruta bastante energética e com uma grande quantidade de vitaminas como C, A, D, B1 e B2, além de grandes quantidades de potássio, fósforo, cálcio e ferro. Por conta disso é amplamente utilizada na alimentação de atletas e altamente recomendada por nutricionistas para todas as idades.",
-      "price": 300,
-      "quantity": "50",
+      "price": "300",
+      "quantity": "12",
       "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.infoescola.com%2Fwp-content%2Fuploads%2F2010%2F04%2Fbanana_600797891.jpg&f=1&nofb=1",
       "id": 1
     },
     {
       "name": "maçã",
       "description": "As maçãs são muito nutritivas, excelente fonte de vitaminas e minerais: contêm vitaminas A, B1, B2, niacina, vitaminas C e E, pectina e sais minerais como fósforo, magnésio,enxofre, potássio e ferro. É também muito rica em substâncias chamadas flavonóides e ácido málico. A pectina, uma ﬁbra encontrada na casca, modera o apetite porque dá sensação de saciedade, e a quercetina, um antioxidante que está presente na polpa, ajuda no combate ao envelhecimento das células do sistema imunológico e protege o organismo dos danos causados pelos radicais livres.",
-      "price": 583,
+      "price": "583",
       "quantity": "10",
       "url": "https://conteudo.imguol.com.br/c/entretenimento/32/2018/01/18/maca-1516308281068_v2_450x337.jpg",
       "id": 2
     },
     {
-      "name": "pera",
-      "description": "Alguns importantes benefícios da pera para a saúde são: melhorar a prisão de ventre, facilitar a perda de peso e controlar a diabetes, pois é uma fruta rica em fibras e tem baixo índice glicêmico, melhorando o funcionamento do intestino e reduzindo o apetite, especialmente quando consumida antes das refeições.",
-      "price": 900,
-      "quantity": "60",
-      "url": "https://www.pensenatural.com.br/wp-content/uploads/2018/09/pera-1.jpg",
-      "id": 3
-    },
-    {
       "name": "repolho",
-      "id": 4,
       "description": "O repolho é rico em vitaminas e minerais, além de ser pouco calórico e pobre em gorduras, se tornando um ótimo aliado no processo de emagrecimento e no fortalecimento do sistema imunológico, por exemplo.",
-      "price": 175,
+      "price": "175",
       "quantity": "10",
-      "url": "data:image/jpeg;base64,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"
+      "url": "data:image/jpeg;base64,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",
+      "id": 4
     },
     {
       "name": "salada",
-      "id": 5,
       "description": "A salada é uma mistura de vários alimentos. Seus benefícios dependerão do que você escolher para compor este prato. Dessa maneira, as propriedades da salada também variam conforme a escolha dos alimentos.",
-      "price": 1300,
+      "price": "1300",
       "quantity": "10",
-      "url": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2018/04/21/salada.jpg"
-    },
-    {
-      "name": "batata",
-      "id": 6,
-      "description": "A Batata é rica em carboidratos e amido. Eles fornecem cerca de 80 calorias por 100 gramas de consumo. Ele também contém água e fibra alimentar em grande proporção. As vitaminas como a vitamina-B, Vitamina C, Vitamina E e Vitamina K estão presentes na Batata. A Batata é altamente ricas em Potássio e alguns outros sais minerais como Cálcio, Ferro, Magnésio, Manganês e Zinco.",
-      "price": 400,
-      "quantity": "10",
-      "url": "https://hiperideal.vteximg.com.br/arquivos/ids/167660-1000-1000/27502.jpg?v=636615816147030000"
+      "url": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2018/04/21/salada.jpg",
+      "id": 5
     },
     {
       "name": "uva",
-      "id": 8,
       "description": "As uvas são frutas ricas em antioxidantes e água, especialmente na sua casca, que trazem benefícios para a saúde como prevenir câncer, evitar a fadiga muscular e melhorar o funcionamento do intestino. Cada variação de uva traz propriedades específicas, e têm-se um maior benefício ao se variar o consumo de uvas verdes e roxas.",
-      "price": 10000,
+      "price": "1000",
       "quantity": "10",
-      "url": "https://revistaadega.uol.com.br/media/tannat_uruguai_franca.jpg"
+      "url": "https://revistaadega.uol.com.br/media/tannat_uruguai_franca.jpg",
+      "id": 8
     },
     {
       "name": "limão",
-      "id": 9,
       "description": "Este fruto é caracterizado por ser rico em vitamina C, representando cerca de 55% da quantidade diária necessária dessa vitamina, que atua como um poderoso antioxidante e ajuda a melhorar o sistema imunológico, evitando doenças como a gripe e os resfriados. Além disso, o limão também contém outros antioxidantes como polifenóis, limonoides e ácido cafeico, os quais possuem outros benefícios para a saúde.",
-      "price": 175,
+      "price": "175",
       "quantity": "10",
-      "url": "https://belezaesaude.com/i/f/o/saude/conteudo/beneficios-limao.jpg"
+      "url": "https://belezaesaude.com/i/f/o/saude/conteudo/beneficios-limao.jpg",
+      "id": 9
     },
     {
       "name": "cebola",
-      "id": 10,
       "description": "A cebola é rica em fibras (são 2 gramas por 100 gramas, ou 2%), pouco calórica (sáo apenas 40 calorias por 100 g), e possui quase nada de gordura e zero de colesterol. Ela é uma ótima opção para prolongar a sensação de saciedade e ajudar no funcionamento regular do intestino. O bulbo também fornece uma boa concentração das vitaminas A, C, B6 e E, além de ácido fólico, manganês, dos minerais potássio, sódio e ferro, do antioxidante quercetina e de sulfetos.",
-      "price": 235,
+      "price": "235",
       "quantity": "10",
-      "url": "https://www.selecoes.com.br/wp-content/uploads/2018/12/iStock-836586846-760x450.jpg"
+      "url": "https://www.selecoes.com.br/wp-content/uploads/2018/12/iStock-836586846-760x450.jpg",
+      "id": 10
     },
     {
       "name": "azeite",
       "description": "O azeite de oliva é composto basicamente por gorduras, sendo 73% delas monoinsaturadas, ou seja, benéficas à saúde. Trata-se de uma substância rica em ômega 6 e que também possui ômega 3 em sua composição, além de vitamina E, vitamina K, vitamina E e antioxidantes.",
-      "price": 2290,
+      "price": "2290",
       "quantity": "125",
       "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.EcVlTdJjYYiciLlewsZqbgHaE6%26pid%3DApi&f=1",
       "id": 11
@@ -83,10 +67,18 @@
     {
       "name": "Melancia",
       "description": "A melancia é composta por 92% de água e apenas 6% de açúcar, que é uma pequena quantidade que não afeta negativamente os níveis de açúcar no sangue e, por isso, é uma boa opção para incluir na dieta.",
-      "price": 200,
+      "price": "200",
       "quantity": "12",
       "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.WS_ij9v7WgtJz7RGUmXEigHaFj%26pid%3DApi&f=1",
       "id": 12
+    },
+    {
+      "name": "morango",
+      "description": "O morango tem propriedades diuréticas, é rico em vitamina C, que ajuda na cicatrização de ferimentos e também fortalece a parede dos vasos sanguíneos melhorando a circulação.",
+      "price": "1222",
+      "quantity": "12",
+      "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.dkiRWWJ4t-KWk7meTmM79AHaE2%26pid%3DApi&f=1",
+      "id": 13
     }
   ],
   "clients": [
@@ -100,27 +92,9 @@
       "name": "Marzeu",
       "email": "marzeu@ratel.com.br",
       "password": "12345",
-      "cpf_cnpj": "00000000000",
+      "cpfCnpj": "00000000000",
       "cep": "00000000",
       "address": "rua paraná, 666"
-    },
-    {
-      "name": "kamila",
-      "email": "kamila@hotmial.com",
-      "password": "12345",
-      "cpfCnpj": "888.888.888-88",
-      "cep": "88045-610",
-      "address": "rua iguaçu, saco dos limões florianopols",
-      "id": 2
-    },
-    {
-      "name": "fabio",
-      "email": "fabio@gmail.com",
-      "password": "12345",
-      "cpfCnpj": "123.456.789-01",
-      "cep": "88888-888",
-      "address": "ruas das pitangas, 457",
-      "id": 3
     }
   ],
   "teachers": [

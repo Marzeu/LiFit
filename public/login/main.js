@@ -8,6 +8,8 @@ let session = [];
 let user = [];
 let order = [];
 
+loadUsers();
+
 function getLocalStorage() {
 
     order = JSON.parse(localStorage.getItem('order'));
@@ -51,14 +53,15 @@ function validation() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let index = users.findIndex(users => users.email === email);
-    let name = "";
-    let id = "";
+    // let name = "";
+    // let id = "";
 
-    if (index === 0) {
-        name = users[index].name;
-        id = users[index].id;
+    if (index === -1) {
+        swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
     }
-    
+    let name = users[index].name;
+    let id = users[index].id;
+    debugger
     if (name == "undefined") {
     } else {
         swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
@@ -73,6 +76,7 @@ function validation() {
                 swal("Email ou senha errados", "Talvez você precise fazer o cadastro.", "error")
             }
         }
+
         if (isLogged === true) {
             session.push({ name: `${name}`, logged: `${isLogged}`, id: `${id}` });
             let sessionJson = JSON.stringify(session);
@@ -87,6 +91,7 @@ function validation() {
         }
     }
 }
+
 
 // validação do email pelo frontend
 const Validade = {
@@ -126,5 +131,4 @@ const Validade = {
     }
 }
 
-loadUsers();
 getLocalStorage();

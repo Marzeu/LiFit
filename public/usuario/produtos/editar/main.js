@@ -84,7 +84,7 @@ async function deleteProducts() {
         })
             .then((deleteProduct) => {
                 if (deleteProduct) {
-                    window.location.href = '/usuarios/produtos'
+                    window.location.href = '/usuario/produtos/'
                 } else {
                     window.location.href = '/'
                 };
@@ -108,7 +108,7 @@ function sweetAlert() {
     })
         .then((updateProduct) => {
             if (updateProduct) {
-                window.location.href = '/usuarios/produtos'
+                window.location.href = '/usuario/produtos'
             } else {
                 window.location.href = '/'
             };

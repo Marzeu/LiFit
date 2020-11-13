@@ -2,15 +2,18 @@ const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/products'
     : 'https://api-lifit.herokuapp.com/products';
 
+let body = [];
+
 async function postProducts() {
 
     const name = document.getElementById('name').value;
     const description = document.getElementById('description').value;
-    const price = document.getElementById('price').value.filter(c => c >= "0" && c <= "9");    
+    const price = document.getElementById('price').value.split("").filter(c => c >= "0" && c <= "9").join("");
     const quantity = document.getElementById('quantity').value;
-    const url = document.getElementById('url').value;
+    const url = document.getElementById('url').value;    
 
-    const body = { name, description, price, quantity, url };
+    let body = { name, description, price, quantity, url };
+   
     try {
         const res = await fetch(URL, {
             method: 'POST',
@@ -43,7 +46,7 @@ function sweetAlert() {
     })
         .then((cadastrarNovo) => {
             if (cadastrarNovo) {
-                window.location.href = '/produtos/novo'
+                window.location.href = '/usuario/produtos/novo'
             } else {
                 window.location.href = '/'
             };

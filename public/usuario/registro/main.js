@@ -4,6 +4,10 @@ const URL = window.location.hostname.includes('localhost')
 
 var users = [];
 var user = [];
+let existedCpfCnpj;
+let existedEmail;
+
+loadUsers();
 
 async function loadUsers() {
     try {
@@ -47,42 +51,42 @@ async function postUsers() {
     const cpfCnpj = document.getElementById('cpf_cnpj').value;
     const cep = document.getElementById('cep').value;
     const address = document.getElementById('address').value;
+debugger
+    let user2 = { name, email, password, cpfCnpj, cep, address };
+    // existedEmail = users.find(users => users.email === email.value)
+    // existedCpfCnpj = users.find(users => users.cpfCnpj === cpfCnpj.value);
 
-    let existedUser = users.find(users => users.email === email) || users.find(users => users.cpfCnpj === cpfCnpj);
+    // if (users.find(users => users.email === email) === email) {
+    //     swal("Não deu", "Email já cadastrado", "error");
 
-    if (email === existedUser.email) {
-        swal("Não deu", "Email já cadastrado", "error");
+    // } else if (password != passwordRepeat) {
+    //     swal("Não deu", "Senha não confere", "error");
 
-    } else if (password != passwordRepeat) {
-        swal("Não deu", "Senha não confere", "error");
+    // // } else if (existedCpfCnpj.cpfCnpj === cpfCnpj.value) {
+    // //     swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
+    // } else {
 
-    } else if (cpfCnpj === existedUser.cpfCnpj) {
-        swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
-
-    } else {
-        const user = { name, email, password, cpfCnpj, cep, address };
-
-        try {
-            const res = await fetch(URL, {
-                method: 'POST',
-                body: JSON.stringify(user),
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                }
-            });
-            if (res.status != 201) {
-                swal("Não deu.", "Algo de errado aconteceu", "error");
-                return;
-            };
-            sweetAlert();
-
-        }
-        catch {
+    try {
+        const res = await fetch(URL, {
+            method: 'POST',
+            body: JSON.stringify(user2),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        });
+        if (res.status != 201) {
             swal("Não deu.", "Algo de errado aconteceu", "error");
+            return;
         };
+        sweetAlert();
+
+    }
+    catch {
+        swal("Não deu.", "Algo de errado aconteceu", "error");
     };
 };
+
 
 function sweetAlert() {
 
@@ -123,5 +127,4 @@ function sweetAlert() {
     };
 };
 
-loadUsers();
 getLocalStorage();

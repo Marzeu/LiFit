@@ -4,8 +4,6 @@ const URL = window.location.hostname.includes('localhost')
 
 var users = [];
 var user = [];
-let existedCpfCnpj;
-let existedEmail;
 
 loadUsers();
 
@@ -59,58 +57,43 @@ async function postUsers() {
     const password = document.getElementById('password').value;
     const passwordRepeat = document.getElementById('passwordRepeat').value;
 
-    if (password === passwordRepeat) {
-debugger
+    let existEmail = false;
+    let existCpfCnpj = false;
+
+    if (password !== passwordRepeat) {
+
+        swal("SENHA não confere", "A senha deve ser a mesma nos campos", "error");
+
+    } else {
+
         for (let i = 0; i < users.length; i++) {
 
             if (users[i].email === email) {
 
-                console.log("email já cadastrado");               
-                swal("Não deu", "Email já cadastrado", "error");
+                existEmail = true;
 
             }
             else if (users[i].cpfCnpj === cpfCnpj) {
 
-                console.log("cpf já cadastrado");
-                swal("Não deu", "CPF ou CNPJ já cadastrado", "error");                
-
+                existCpfCnpj = true;
             }
         }
-        users = { name, email, password, cpfCnpj, cep, address };
-        post()
-    } else {
-        swal("SENHA não confere", "A senha deve ser a mesma nos campos", "error");
+
+        if (existEmail === true) {
+
+            swal("Email já cadastrado", "Utilize outro email", "error");
+
+        } else if (existCpfCnpj === true) {
+
+            swal("CPF ou CNPJ já cadastrado", "Utilize outro cpf ou cnpj", "error");
+
+        } else {
+
+            users = { name, email, password, cpfCnpj, cep, address };
+            post()
+        }
     }
-
-
-    // if (existedEmail.email === email) {
-
-    //     console.log("deu ruim viado")
-    //     swal("Não deu", "Email já cadastrado", "error");
-
-    // } else if (existedCpfCnpj.cpfCnpj === cpfCnpj) {
-
-    //     swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
-
-    // } else {
-
-    // existedEmail = users.find(users => users.email === email.value)
-    // existedCpfCnpj = users.find(users => users.cpfCnpj === cpfCnpj.value);
-
-    // if (users.find(users => users.email === email) === email) {
-    //     swal("Não deu", "Email já cadastrado", "error");
-
-    // } else if (password != passwordRepeat) {
-    //     swal("Não deu", "Senha não confere", "error");
-
-    // // } else if (existedCpfCnpj.cpfCnpj === cpfCnpj.value) {
-    // //     swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
-    // } else {
-
-
 }
-
-
 
 async function post() {
     try {

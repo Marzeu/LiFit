@@ -21,38 +21,79 @@ async function loadUsers() {
 
 function getLocalStorage() {
 
-    if (localStorage.length === 0) {
-        let isLogged = false;
+    user = JSON.parse(localStorage.getItem('session'));
+
+    if (user === null) {
+
         user = [];
-        user.push({ logged: `${isLogged}` });
+        let logged = false;
+        user.push({ logged: `${logged}` });
         let userJson = JSON.stringify(user);
         localStorage.setItem('session', userJson);
 
     } else {
-        user = JSON.parse(localStorage.getItem('session'));
+
+        for (let i = 0; i < user.length; i++) {
+
+            if (user[i].logged === "false") {
+                console.log("não está logado")
+
+            } else {
+                swal("Você já está logado.", "Obrigado!", "error")
+                    .then(() => {
+                        window.location.href = '/';
+                    });
+            }
+        }
     }
-    isLoggedIn()
 }
 
-function isLoggedIn() {
-    if (user[0].logged === "true") {
-        swal("Você já está logado.", "Obrigado!", "error")
-            .then(() => {
-                window.location.href = '/';
-            })
-    }
-}
 
 async function postUsers() {
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const passwordRepeat = document.getElementById('passwordRepeat').value;
     const cpfCnpj = document.getElementById('cpf_cnpj').value;
     const cep = document.getElementById('cep').value;
     const address = document.getElementById('address').value;
+    const password = document.getElementById('password').value;
+    const passwordRepeat = document.getElementById('passwordRepeat').value;
+
+    if (password === passwordRepeat) {
 debugger
-    let user2 = { name, email, password, cpfCnpj, cep, address };
+        for (let i = 0; i < users.length; i++) {
+
+            if (users[i].email === email) {
+
+                console.log("email já cadastrado");               
+                swal("Não deu", "Email já cadastrado", "error");
+
+            }
+            else if (users[i].cpfCnpj === cpfCnpj) {
+
+                console.log("cpf já cadastrado");
+                swal("Não deu", "CPF ou CNPJ já cadastrado", "error");                
+
+            }
+        }
+        users = { name, email, password, cpfCnpj, cep, address };
+        post()
+    } else {
+        swal("SENHA não confere", "A senha deve ser a mesma nos campos", "error");
+    }
+
+
+    // if (existedEmail.email === email) {
+
+    //     console.log("deu ruim viado")
+    //     swal("Não deu", "Email já cadastrado", "error");
+
+    // } else if (existedCpfCnpj.cpfCnpj === cpfCnpj) {
+
+    //     swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
+
+    // } else {
+
     // existedEmail = users.find(users => users.email === email.value)
     // existedCpfCnpj = users.find(users => users.cpfCnpj === cpfCnpj.value);
 
@@ -66,10 +107,16 @@ debugger
     // //     swal("Não deu", "CPF ou CNPJ já cadastrado", "error");
     // } else {
 
+
+}
+
+
+
+async function post() {
     try {
         const res = await fetch(URL, {
             method: 'POST',
-            body: JSON.stringify(user2),
+            body: JSON.stringify(users),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -78,15 +125,13 @@ debugger
         if (res.status != 201) {
             swal("Não deu.", "Algo de errado aconteceu", "error");
             return;
-        };
+        }
         sweetAlert();
-
     }
     catch {
         swal("Não deu.", "Algo de errado aconteceu", "error");
-    };
-};
-
+    }
+}
 
 function sweetAlert() {
 

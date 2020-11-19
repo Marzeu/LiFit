@@ -95,42 +95,6 @@
       "cpfCnpj": "00000000000",
       "cep": "00000000",
       "address": "rua paraná, 666"
-    },
-    {
-      "name": "kamila",
-      "email": "kamila@ratel.com",
-      "password": "12345",
-      "cpfCnpj": "123.456.789-12",
-      "cep": "88045-610",
-      "address": "ruas das pitangas, 457",
-      "id": 2
-    },
-    {
-      "name": "Marza e pamy",
-      "email": "kamila2@ratel.com",
-      "password": "123",
-      "cpfCnpj": "123.456.789-13",
-      "cep": "88045-610",
-      "address": "ruas das pitangas, 457",
-      "id": 3
-    },
-    {
-      "name": "Marzeu Ama Pamy",
-      "email": "marzeu@ratel.com",
-      "password": "12345",
-      "cpfCnpj": "123.456.789-14",
-      "cep": "88045-610",
-      "address": "ruas das pitangas, 457",
-      "id": 4
-    },
-    {
-      "name": "",
-      "email": "marz12eu@ratel.com",
-      "password": "",
-      "cpfCnpj": "123.456.789-16",
-      "cep": "",
-      "address": "",
-      "id": 5
     }
   ],
   "teachers": [

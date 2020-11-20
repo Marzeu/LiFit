@@ -62,14 +62,22 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 ---
 ## 🎨 Layout
 
-<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
-
+<table>
+<tr>
+<td align="center" style="border: 2px solid white"><img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
+</td>
+<td align="center" style="border: 2px solid white">
 <img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit2.gif" width="350px"/>
-
+</td>
+</tr>
+<tr>
+<td align="center" style="border: 2px solid white">
 <img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit3.gif" width="350px"/>
-
-<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit4.gif" width="350px"/>
-
+</td>
+<td align="center" style="border: 2px solid white">
+<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit4.gif" width="350px"/></td>
+</tr>
+</table>
 
 ---
 ## 🛠 Tecnologias
@@ -80,6 +88,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Bootstrap](https://getbootstrap.com/)**
 -   **[Sweet Alert](https://sweetalert.js.org/)**
 -   **[Lottie](https://airbnb.design/lottie/)**
+-   **[Heroku](https://www.heroku.com/)**
+
 
 ---
 ## 👶 Autores

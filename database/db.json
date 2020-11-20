@@ -79,6 +79,14 @@
       "quantity": "12",
       "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.dkiRWWJ4t-KWk7meTmM79AHaE2%26pid%3DApi&f=1",
       "id": 13
+    },
+    {
+      "name": "laranja",
+      "description": "A laranja é uma das frutas mais populares e amadas em nosso país. Seu sabor característico, seus nutrientes e o fácil acesso fazem com que a fruta dificilmente fique fora do dia a dia do brasileiro. Sem contar os benefícios da laranja para a saúde, que são inúmeros!",
+      "price": "122",
+      "quantity": "10",
+      "url": "https://rotanatural.eco.br/wp-content/uploads/2017/03/laranja.jpg",
+      "id": 14
     }
   ],
   "clients": [
@@ -95,6 +103,15 @@
       "cpfCnpj": "00000000000",
       "cep": "00000000",
       "address": "rua paraná, 666"
+    },
+    {
+      "name": "marzeu",
+      "email": "marzeu@ratel.com",
+      "password": "12345",
+      "cpfCnpj": "123.456.789-12",
+      "cep": "88045-610",
+      "address": "rua das pitangas, 177",
+      "id": 2
     }
   ],
   "teachers": [

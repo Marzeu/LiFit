@@ -62,11 +62,14 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 ---
 ## 🎨 Layout
 
-<!-- O layout da aplicação está disponível no Figma:
+<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
 
-<a href="https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A546">
-  <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
-</a> -->
+<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit2.gif" width="350px"/>
+
+<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit3.gif" width="350px"/>
+
+<img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit4.gif" width="350px"/>
+
 
 ---
 ## 🛠 Tecnologias

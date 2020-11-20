@@ -62,7 +62,7 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 ---
 ## 🎨 Layout
 <h1 align="center">
-<table style="border-collapse: collapse">
+<table align="center">
 <tr>
 <td align="center" style="border: 1px solid"><img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
 </td>

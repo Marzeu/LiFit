@@ -79,6 +79,7 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 </tr>
 </table>
 </h1>
+
 ---
 ## 🛠 Tecnologias
 

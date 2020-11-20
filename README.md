@@ -61,24 +61,24 @@ Projeto desenvolvido durante a Situação de Aprendizagem ao decorrer do curso d
 
 ---
 ## 🎨 Layout
-
-<table>
+<h1 align="center">
+<table style="border-collapse: collapse">
 <tr>
-<td align="center" style="border: 2px solid white"><img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
+<td align="center" style="border: 1px solid"><img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit.gif" width="350px"/>
 </td>
-<td align="center" style="border: 2px solid white">
+<td align="center" style="border: 1px solid">
 <img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit2.gif" width="350px"/>
 </td>
 </tr>
 <tr>
-<td align="center" style="border: 2px solid white">
+<td align="center" style="border: 1px solid">
 <img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit3.gif" width="350px"/>
 </td>
-<td align="center" style="border: 2px solid white">
+<td align="center" style="border: 1px solid">
 <img alt="Lifit" title="#Lifit" src="./public/assets/gif/lifit4.gif" width="350px"/></td>
 </tr>
 </table>
-
+</h1>
 ---
 ## 🛠 Tecnologias
 
